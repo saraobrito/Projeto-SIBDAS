@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário CMMS - Hospital Praia Dourada</title>
+    <link rel="shortcut icon" href="../assets/img/logo_azul_125.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/1231266_private.css">
+
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Inventário CMMS<br><span style="font-size:0.8rem; color:#888;">Hospital Praia Dourada</span></h3>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="../private/index_private.html" class="ativo">Dashboard Geral</a></li>
+            <li><a href="../private/equipamentos.html">Equipamentos</a></li>
+            <li><a href="../private/componentes.html">Componentes</a></li>
+            <li><a href="../private/categorias.html">Categorias</a></li>
+            <li><a href="../private/localizacoes.html">Localizações</a></li>
+            <li><a href="../private/fornecedores.html">Fornecedores</a></li>
+            <li><a href="../private/documentacao.html">Documentação</a></li>
+            <li><a href="../private/garantiascontratos.html">Garantias & Contratos</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="../public/index.html" class="btn-sair">Terminar Sessão</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="cabecalho-dashboard">
+            <div>
+                <h1>Gestão de Parque Tecnológico</h1>
+                <p style="color: #666;">Visão global dos dispositivos médicos do hospital.</p>
+            </div>
+            <div style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
+                <strong>Eng. Biomédica</strong> - Sessão Ativa
+            </div>
+        </header>
+
+        <div class="cards-grid">
+            <div class="card-dash">
+                <h4>Total Equipamentos</h4>
+                <div class="numero">1,500</div>
+            </div>
+            <div class="card-dash">
+                <h4>Ativos</h4>
+                <div class="numero" style="color: #4caf50;">1,420</div>
+            </div>
+            <div class="card-dash">
+                <h4>Em Manutenção</h4>
+                <div class="numero" style="color: #ff9800;">45</div>
+            </div>
+            <div class="card-dash">
+                <h4>Inativos / Abatidos</h4>
+                <div class="numero" style="color: #f44336;">35</div>
+            </div>
+        </div>
+
+        <section class="seccao-tabela">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="font-size: 1.5rem; color: #1976d2; margin:0;">Registo de Equipamentos</h2>
+                <button style="background: #2196f3; color: white; border: none; padding: 10px 20px; border-radius: 15px; cursor: pointer; font-weight: bold;">+ Novo Equipamento</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código Interno</th>
+                        <th>Designação</th>
+                        <th>Marca / Modelo</th>
+                        <th>Localização</th>
+                        <th>Criticidade</th>
+                        <th>Estado</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="codigo-inv">04.002.00</span></td>
+                        <td>Monitor Multiparamétrico</td>
+                        <td>Philips IntelliVue MP5</td>
+                        <td>Cuidados Intensivos</td>
+                        <td><span class="badge crit-suporte">Suporte Vida</span></td>
+                        <td><span class="badge b-ativo">Ativo</span></td>
+                        <td><button class="btn-acao">Ficha Técnica</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="codigo-inv">07.015.01</span></td>
+                        <td>Ventilador Pulmonar</td>
+                        <td>Dräger Evita V500</td>
+                        <td>Cuidados Intensivos</td>
+                        <td><span class="badge crit-suporte">Suporte Vida</span></td>
+                        <td><span class="badge b-manutencao">Em Manutenção</span></td>
+                        <td><button class="btn-acao">Ficha Técnica</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="codigo-inv">12.040.10</span></td>
+                        <td>Bomba de Infusão</td>
+                        <td>B. Braun Infusomat</td>
+                        <td>Serviço de Medicina</td>
+                        <td><span class="badge crit-media">Média</span></td>
+                        <td><span class="badge b-ativo">Ativo</span></td>
+                        <td><button class="btn-acao">Ficha Técnica</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="codigo-inv">09.102.05</span></td>
+                        <td>Desfibrilhador</td>
+                        <td>Zoll R Series</td>
+                        <td>Urgência</td>
+                        <td><span class="badge crit-alta">Alta</span></td>
+                        <td><span class="badge b-inativo">Em Calibração</span></td>
+                        <td><button class="btn-acao">Ficha Técnica</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
