@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos Médicos - Hospital Praia Dourada</title>
+    <link rel="shortcut icon" href="../assets/img/logo_azul_125.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/1231266_private.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Inventário CMMS<br><span style="font-size:0.8rem; color:#888;">Hospital Praia Dourada</span></h3>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="../private/index_private.html">Dashboard Geral</a></li>
+            <li><a href="../private/equipamentos.html" class="ativo">Equipamentos</a></li>
+            <li><a href="../private/componentes.html">Componentes</a></li>
+            <li><a href="../private/categorias.html">Categorias</a></li>
+            <li><a href="../private/localizacoes.html">Localizações</a></li>
+            <li><a href="../private/fornecedores.html">Fornecedores</a></li>
+            <li><a href="../private/documentacao.html">Documentação</a></li>
+            <li><a href="../private/garantiascontratos.html">Garantias & Contratos</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="../public/index.html" class="btn-sair">Terminar Sessão</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="cabecalho-dashboard">
+            <div>
+                <h1>Gestão de Equipamentos</h1>
+                <p style="color: #666;">Consulta, pesquisa e gestão detalhada de todo o inventário.</p>
+            </div>
+            <div style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
+                <strong>Eng. Biomédica</strong> - Sessão Ativa
+            </div>
+        </header>
+
+        <section class="seccao-tabela">
+            
+            <div class="barra-filtros">
+                <div class="grupo-pesquisa">
+                    <input type="text" class="input-pesquisa" placeholder="Pesquisar por Código, Nome ou Marca...">
+                    
+                    <select class="select-filtro">
+                        <option value="">Todos os Serviços</option>
+                        <option value="uci">Cuidados Intensivos</option>
+                        <option value="urg">Urgência</option>
+                        <option value="med">Medicina Interna</option>
+                    </select>
+
+                    <select class="select-filtro">
+                        <option value="">Todos os Estados</option>
+                        <option value="ativo">Ativo</option>
+                        <option value="manutencao">Em Manutenção</option>
+                        <option value="calibracao">Em Calibração</option>
+                    </select>
+                </div>
+                
+                <a href="../private/registarequipamento.html" class="btn-novo-equipamento">+ Novo Equipamento</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Equipamento / Marca</th>
+                        <th>Localização</th>
+                        <th>Próx. Manutenção</th>
+                        <th>Criticidade</th>
+                        <th>Estado</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="codigo-inv">04.002.00</span></td>
+                        <td>
+                            <strong>Monitor Multiparamétrico</strong><br>
+                            <span style="font-size: 0.85rem; color: #888;">Philips IntelliVue MP5</span>
+                        </td>
+                        <td>Cuidados Intensivos</td>
+                        <td>15/11/2026</td>
+                        <td><span class="badge crit-suporte">Suporte Vida</span></td>
+                        <td><span class="badge b-ativo">Ativo</span></td>
+                        <td>
+                            <button class="btn-acao">Editar</button>
+                            <button class="btn-acao btn-acao-danger">Abater</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="codigo-inv">07.015.01</span></td>
+                        <td>
+                            <strong>Ventilador Pulmonar</strong><br>
+                            <span style="font-size: 0.85rem; color: #888;">Dräger Evita V500</span>
+                        </td>
+                        <td>Cuidados Intensivos</td>
+                        <td>02/09/2026</td>
+                        <td><span class="badge crit-suporte">Suporte Vida</span></td>
+                        <td><span class="badge b-manutencao">Em Manutenção</span></td>
+                        <td>
+                            <button class="btn-acao">Editar</button>
+                            <button class="btn-acao btn-acao-danger">Abater</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="codigo-inv">12.040.10</span></td>
+                        <td>
+                            <strong>Bomba de Infusão</strong><br>
+                            <span style="font-size: 0.85rem; color: #888;">B. Braun Infusomat</span>
+                        </td>
+                        <td>Serviço de Medicina</td>
+                        <td>20/12/2026</td>
+                        <td><span class="badge crit-media">Média</span></td>
+                        <td><span class="badge b-ativo">Ativo</span></td>
+                        <td>
+                            <button class="btn-acao">Editar</button>
+                            <button class="btn-acao btn-acao-danger">Abater</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="paginacao">
+                <button class="pag-num">Anterior</button>
+                <button class="pag-num ativo">1</button>
+                <button class="pag-num">2</button>
+                <button class="pag-num">3</button>
+                <button class="pag-num">Seguinte</button>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
