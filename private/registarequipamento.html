@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registar Novo Equipamento - Hospital Praia Dourada</title>
+    <title>Equipamentos Médicos - Hospital Praia Dourada</title>
+    <!-- favicon -->
     <link rel="shortcut icon" href="../assets/img/logo_azul_125.png" type="image/png">
+    
+    <!-- folha de estilos CSS -->
     <link rel="stylesheet" href="../assets/css/1231266_private.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="../private/includes/fontawesome/all.min.css">
+
+    <!-- Bootstrap CSS & custom CSS -->
+    <link rel="stylesheet" href="../private/includes/bootstrap/bootstrap.min.css">
+
 </head>
 <body>
 
+<!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-header">
             <h3>Inventário CMMS<br><span style="font-size:0.8rem; color:#888;">Hospital Praia Dourada</span></h3>
@@ -30,14 +46,23 @@
         </div>
     </aside>
 
-    <main class="main-content">
-        <header class="cabecalho-dashboard">
+    <main class="main-content" style="padding-top: 0; padding-left: 0; padding-right: 0;">
+        <header class="cabecalho-dashboard" style="padding: 20px 30px; margin: 0;">
             <div>
                 <h1>Registar Novo Equipamento</h1>
                 <p style="color: #666;">Insira os dados obrigatórios para integrar o dispositivo no inventário hospitalar.</p>
             </div>
-            <div style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
-                <strong>Eng. Biomédica</strong> - Sessão Ativa
+            <div class="dropdown">
+                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
+                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
+                    <i class="fa-regular fa-user me-1"></i> <strong>Utilizador</strong> - Data
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow">
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
+                </ul>
             </div>
         </header>
 
@@ -167,6 +192,9 @@
 
         </section>
     </main>
+
+<!-- Bootstrap JS and custom JS -->
+<script src="../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

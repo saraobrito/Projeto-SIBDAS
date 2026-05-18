@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipamentos Médicos - Hospital Praia Dourada</title>
+    <!-- favicon -->
     <link rel="shortcut icon" href="../assets/img/logo_azul_125.png" type="image/png">
+    
+    <!-- folha de estilos CSS -->
     <link rel="stylesheet" href="../assets/css/1231266_private.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="../private/includes/fontawesome/all.min.css">
+
+    <!-- Bootstrap CSS & custom CSS -->
+    <link rel="stylesheet" href="../private/includes/bootstrap/bootstrap.min.css">
+
 </head>
 <body>
-
+    
+<!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-header">
             <h3>Inventário CMMS<br><span style="font-size:0.8rem; color:#888;">Hospital Praia Dourada</span></h3>
@@ -30,14 +46,24 @@
         </div>
     </aside>
 
-    <main class="main-content">
-        <header class="cabecalho-dashboard">
+<!-- Conteúdo Principal-->
+    <main class="main-content" style="padding-top: 0; padding-left: 0; padding-right: 0;">
+        <header class="cabecalho-dashboard" style="padding: 20px 30px; margin: 0;">
             <div>
                 <h1>Gestão de Equipamentos</h1>
                 <p style="color: #666;">Consulta, pesquisa e gestão detalhada de todo o inventário.</p>
             </div>
-            <div style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
-                <strong>Eng. Biomédica</strong> - Sessão Ativa
+            <div class="dropdown">
+                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
+                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
+                    <i class="fa-regular fa-user me-1"></i> <strong>Utilizador</strong> - Data
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow">
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
+                </ul>
             </div>
         </header>
 
@@ -88,9 +114,18 @@
                         <td>15/11/2026</td>
                         <td><span class="badge crit-suporte">Suporte Vida</span></td>
                         <td><span class="badge b-ativo">Ativo</span></td>
-                        <td>
-                            <button class="btn-acao">Editar</button>
-                            <button class="btn-acao btn-acao-danger">Abater</button>
+                        <td class="text-center align-middle">
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-primary" title="Ver Detalhes">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-warning" title="Editar">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a> 
+                                <a href="../private/apagar.html" class="btn btn-sm btn-outline-danger" title="Apagar">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -103,9 +138,18 @@
                         <td>02/09/2026</td>
                         <td><span class="badge crit-suporte">Suporte Vida</span></td>
                         <td><span class="badge b-manutencao">Em Manutenção</span></td>
-                        <td>
-                            <button class="btn-acao">Editar</button>
-                            <button class="btn-acao btn-acao-danger">Abater</button>
+                        <td class="text-center align-middle">
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-primary" title="Ver Detalhes">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-warning" title="Editar">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a> 
+                                <a href="../private/apagar.html" class="btn btn-sm btn-outline-danger" title="Apagar">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -118,9 +162,18 @@
                         <td>20/12/2026</td>
                         <td><span class="badge crit-media">Média</span></td>
                         <td><span class="badge b-ativo">Ativo</span></td>
-                        <td>
-                            <button class="btn-acao">Editar</button>
-                            <button class="btn-acao btn-acao-danger">Abater</button>
+                        <td class="text-center align-middle">
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-sm btn-outline-primary" title="Ver Detalhes">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-warning" title="Editar">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a> 
+                                <a href="../private/apagar.html" class="btn btn-sm btn-outline-danger" title="Apagar">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -136,6 +189,9 @@
 
         </section>
     </main>
+
+<!-- Bootstrap JS and custom JS -->
+<script src="../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
