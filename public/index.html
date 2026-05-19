@@ -3,94 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vila Baleira Software</title>
-    <link rel="shortcut icon" href="../assets/img/logo_cores_125.png" type="image/png">
-    <link rel="stylesheet" href="../assets/css/1231266.css">
+    <title>Vila Baleira Web</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../public/includes/img/logo_cores_125.png" type="image/png">
+    
+    <!-- folha de estilos CSS -->
+    <link rel="stylesheet" href="../public/includes/css/1231266.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../public/includes/fontawesome/all.min.css">
+
+    <!-- Bootstrap CSS & custom CSS -->
+    <link rel="stylesheet" href="../public/includes/bootstrap/bootstrap.min.css">
+
 </head>
-<body>
-    <nav class="bng-navbar">
-        <div>
-            <img src="../assets/img/logo_branco_125.png" alt="Logo Vila Baleira Software">
-            <h3>Vila Baleira Software</h3>
-        </div>
+<body data-bs-spy="scroll" data-bs-target="#navbar-principal" data-bs-offset="100" tabindex="0">
 
-        <div class="container-navegacao">
-            <a href="#home">Início</a>
-            <a href="#sobre-nos">Sobre Nós</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contactos">Contactos</a>
-        </div>
+    <nav id="navbar-principal" class="navbar navbar-expand-lg border-bottom sticky-top py-3 px-4 shadow-sm nav-bg-clara">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#home">
+                <img src="../public/includes/img/logo_cores_125.png" alt="Logo Vila Baleira Web" height="40" onerror="this.src='https://via.placeholder.com/40?text=Logo'">
+                <h4 class="text-primary-soft fw-bold mb-0">Vila Baleira Web</h4>
+            </a>
 
-        <div class="nav-cliente">
-            <a href="../login/login.html">Login</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarConteudo">
+                
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0 fw-semibold gap-lg-4 text-center mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-secondary custom-nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary custom-nav-link" href="#sobre-nos">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary custom-nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary custom-nav-link" href="#contactos">Contactos</a></li>
+                </ul>
+
+                <div class="d-flex justify-content-center">
+                    <a href="../login/login.html" class="btn btn-login rounded-pill shadow-sm fw-bold px-4 py-2 d-flex align-items-center gap-2">
+                        <i class="fa-regular fa-user"></i> Login
+                    </a>
+                </div>
+            </div>
+
         </div>
     </nav>
 
-    <section class="container-texto-generico" id="home">
-        <div class="home-content">
-            <h1>Vila Baleira Software</h1>
-            <p>Inovação e tecnologia de ponta dedicadas exclusivamente à gestão na área da saúde.</p>
-            <a href="../login/registo.html" class="btn-primary">Criar Conta</a>
+    <section id="home" class="py-5 text-center bg-white border-bottom" style="padding-top: 100px !important; padding-bottom: 100px !important;">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold text-primary-soft mb-3">Vila Baleira Web</h1>
+            <p class="lead text-secondary mb-4">Inovação e tecnologia de ponta dedicadas exclusivamente à gestão na área da saúde.</p>
+            <a href="../login/registo.html" class="btn btn-primary-soft rounded-pill px-5 py-3 fw-bold shadow-sm">Criar Conta</a>
         </div>
     </section>
 
-    <section id="sobre-nos">
-        <h2>A Nossa Empresa & Missão</h2>
-        <div class="sobre-container">
-            <p>
-                A <strong>Vila Baleira Software</strong> é uma empresa tecnológica especializada no desenvolvimento de soluções digitais para o setor da saúde. 
-                A nossa <strong>missão</strong> é simplificar o dia a dia dos profissionais de saúde e engenheiros biomédicos, oferecendo ferramentas robustas, seguras e intuitivas.
-            </p>
-            <div class="stats">
-                <div class="stat-item"><strong>100%</strong><span>Foco na Saúde</span></div>
-                <div class="stat-item"><strong>24/7</strong><span>Suporte Técnico</span></div>
-                <div class="stat-item"><strong>+50</strong><span>Hospitais Parceiros</span></div>
+    <section id="sobre-nos" class="py-5 bg-white border-bottom">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="text-primary-soft fw-bold">A Nossa Empresa & Missão</h2>
+                    <p class="lead text-secondary mt-3">
+                        A <strong>Vila Baleira Web</strong> é uma empresa tecnológica especializada no desenvolvimento de soluções digitais para o setor da saúde. 
+                        A nossa <strong>missão</strong> é simplificar o dia a dia dos profissionais de saúde e engenheiros biomédicos, oferecendo ferramentas robustas, seguras e intuitivas.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="bg-light">
-        <h2>Os Nossos Serviços</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Software Hospitalar</h3>
-                <p>Desenvolvimento de sistemas personalizados para a gestão clínica e administrativa do seu hospital.</p>
-            </div>
-            <div class="card">
-                <h3>Gestão de Inventários</h3>
-                <p>Controlo rigoroso e em tempo real do stock de consumíveis e equipamentos médicos.</p>
-            </div>
-            <div class="card">
-                <h3>Planos de Manutenção</h3>
-                <p>Módulos integrados para agendar e registar manutenções preventivas e corretivas.</p>
-            </div>
-            <div class="card">
-                <h3>Sistema CMMS</h3>
-                <p>O nosso produto estrela: um <em>Computerized Maintenance Management System</em> desenhado especificamente para Engenharia Biomédica.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contactos">
-        <h2>Contactos e Localização</h2>
-        <div class="contact-container">
-            <div class="info">
-                <p><strong>Morada:</strong> Rua Dr. Nuno Silvestre Teixeira, Vila Baleira, 9400-162 Porto Santo</p>
-                <p><strong>Telefone:</strong> +351 291 980 100</p>
-                <p><strong>E-mail:</strong> info@vilabaleirasoftware.pt</p>
-                <p><strong>Horário de Suporte:</strong> 24h / 365 dias</p>
-            </div>
-            <div class="map-placeholder">
-                <iframe
-                    src="https://www.google.com/maps?q=Rua+Dr.+Nuno+Silvestre+Teixeira,+Porto+Santo&z=18&output=embed"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4 nav-bg-clara rounded-4 shadow-sm h-100 border-0">
+                        <h2 class="text-primary-soft fw-bold display-5">100%</h2>
+                        <span class="text-secondary fw-semibold">Foco na Saúde</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 nav-bg-clara rounded-4 shadow-sm h-100 border-0">
+                        <h2 class="text-primary-soft fw-bold display-5">24/7</h2>
+                        <span class="text-secondary fw-semibold">Suporte Técnico</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 nav-bg-clara rounded-4 shadow-sm h-100 border-0">
+                        <h2 class="text-primary-soft fw-bold display-5">+50</h2>
+                        <span class="text-secondary fw-semibold">Hospitais Parceiros</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2024 Vila Baleira Software - Soluções Tecnológicas para a Saúde</p>
+    <section id="servicos" class="py-5 bg-white border-bottom">
+        <div class="container py-4">
+            <h2 class="text-primary-soft fw-bold text-center mb-5">Os Nossos Serviços</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-3 nav-bg-clara">
+                        <div class="card-body text-center text-md-start">
+                            <i class="fa-solid fa-laptop-medical fs-2 text-primary-soft mb-3"></i>
+                            <h5 class="fw-bold text-dark mb-3">Web Hospitalar</h5>
+                            <p class="text-secondary mb-0">Desenvolvimento de sistemas personalizados para a gestão clínica e administrativa do seu hospital.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-3 nav-bg-clara">
+                        <div class="card-body text-center text-md-start">
+                            <i class="fa-solid fa-boxes-stacked fs-2 text-primary-soft mb-3"></i>
+                            <h5 class="fw-bold text-dark mb-3">Gestão de Inventários</h5>
+                            <p class="text-secondary mb-0">Controlo rigoroso e em tempo real do stock de consumíveis e equipamentos médicos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-3 nav-bg-clara">
+                        <div class="card-body text-center text-md-start">
+                            <i class="fa-solid fa-screwdriver-wrench fs-2 text-primary-soft mb-3"></i>
+                            <h5 class="fw-bold text-dark mb-3">Planos de Manutenção</h5>
+                            <p class="text-secondary mb-0">Módulos integrados para agendar e registar manutenções preventivas e corretivas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-3 nav-bg-clara">
+                        <div class="card-body text-center text-md-start">
+                            <i class="fa-solid fa-microchip fs-2 text-primary-soft mb-3"></i>
+                            <h5 class="fw-bold text-dark mb-3">Sistema CMMS</h5>
+                            <p class="text-secondary mb-0">O nosso produto estrela: um <em>Computerized Maintenance Management System</em> desenhado especificamente para Engenharia Biomédica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactos" class="py-5 bg-white">
+        <div class="container py-4">
+            <h2 class="text-primary-soft fw-bold text-center mb-5">Contactos e Localização</h2>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 nav-bg-clara">
+                        <ul class="list-unstyled mb-0 text-secondary fs-5">
+                            <li class="mb-3"><i class="fa-solid fa-location-dot text-primary-soft me-3"></i>Rua Dr. Nuno Silvestre Teixeira, Vila Baleira, 9400-162 Porto Santo</li>
+                            <li class="mb-3"><i class="fa-solid fa-phone text-primary-soft me-3"></i>+351 291 980 100</li>
+                            <li class="mb-3"><i class="fa-solid fa-envelope text-primary-soft me-3"></i>info@vilabaleiraWeb.pt</li>
+                            <li><i class="fa-solid fa-clock text-primary-soft me-3"></i>Suporte: 24h / 365 dias</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="rounded-4 overflow-hidden shadow-sm border" style="height: 300px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13264.453913009587!2d-16.347594049999998!3d33.0640495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc608a46b3f9ff73%3A0xc346bb6f78f65eb4!2sVila%20Baleira%2C%20Porto%20Santo!5e0!3m2!1spt-PT!2spt!4v1716301321703!5m2!1spt-PT!2spt" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0 fw-light">© 2024 Vila Baleira Web - Soluções Tecnológicas para a Saúde</p>
+        </div>
     </footer>
+
+<!-- Bootstrap JS and custom JS -->
+<script src="../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

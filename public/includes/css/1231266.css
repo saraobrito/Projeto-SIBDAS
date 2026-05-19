@@ -1,0 +1,61 @@
+/* Definição da Fonte Pedida */
+body {
+    font-family: 'Titillium Web', sans-serif;
+    position: relative; /* Necessário para o scrollspy do Bootstrap */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cor de fundo azul muito clara (Usada na Navbar e nos Cards de Serviço) */
+.nav-bg-clara {
+    background-color: #f0f7fd !important;
+}
+
+/* Novo Azul Suave */
+.text-primary-soft { 
+    color: #4a90e2 !important; 
+}
+
+/* -------------------------------------
+   BOTÃO "CRIAR CONTA"
+---------------------------------------- */
+.btn-primary-soft { 
+    background-color: #4a90e2 !important; 
+    border: 1px solid #4a90e2 !important; 
+    color: #ffffff !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary-soft:hover { 
+    background-color: #357abd !important; 
+    border-color: #357abd !important; 
+    color: #ffffff !important;
+}
+
+/* Links de Navegação - Mudam para azul suave ao passar o rato ou quando ativos */
+.custom-nav-link {
+    transition: color 0.2s ease-in-out;
+}
+
+.custom-nav-link:hover, 
+.custom-nav-link.active {
+    color: #4a90e2 !important;
+}
+
+/* -------------------------------------
+   BOTÃO "LOGIN"
+---------------------------------------- */
+.btn-login {
+    background-color: #ffffff !important; /* Força o fundo branco */
+    color: #4a90e2 !important;
+    border: 1px solid #4a90e2 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Ao passar o rato, o botão sobe ligeiramente e ganha sombra */
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2) !important;
+    background-color: #ffffff !important; /* Mantém fundo branco no hover */
+    color: #4a90e2 !important;
+}
