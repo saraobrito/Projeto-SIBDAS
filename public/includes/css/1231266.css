@@ -11,7 +11,7 @@ body {
     background-color: #f0f7fd !important;
 }
 
-/* Novo Azul Suave */
+
 .text-primary-soft { 
     color: #4a90e2 !important; 
 }
@@ -32,7 +32,7 @@ body {
     color: #ffffff !important;
 }
 
-/* Links de Navegação - Mudam para azul suave ao passar o rato ou quando ativos */
+/* Links de Navegação - Mudam para azul ao passar o rato ou quando ativos */
 .custom-nav-link {
     transition: color 0.2s ease-in-out;
 }
@@ -58,4 +58,133 @@ body {
     box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2) !important;
     background-color: #ffffff !important; /* Mantém fundo branco no hover */
     color: #4a90e2 !important;
+}
+
+/* =========================================================
+   PÁGINAS DE LOGIN E REGISTO (Isoladas para não afetar o Index)
+========================================================= */
+.body-auth {
+    background: linear-gradient(rgba(74, 144, 226, 0.15), rgba(74, 144, 226, 0.15)),
+                url('https://images.unsplash.com/photo-1519494026892-80bbd2d670db?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px; /* Previne colar aos limites em telemóveis */
+}
+
+.auth-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid #f0f7fd; /* Azul muito claro */
+    animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.auth-card h2 {
+    color: #4a90e2;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.auth-card p.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+/* Alterado de .input-group para evitar conflito com o Bootstrap */
+.custom-input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.custom-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.custom-input-group input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #dbeafe;
+    background: #f8fbff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.custom-input-group input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.25);
+}
+
+.btn-auth-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.btn-auth-submit:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+.auth-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.auth-link a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.auth-link a:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+.btn-nova-conta {
+    display: block; 
+    padding: 12px; 
+    background: #f0f7fd; 
+    color: #4a90e2; 
+    text-decoration: none; 
+    border-radius: 15px; 
+    font-weight: bold; 
+    border: 1px solid #dbeafe; 
+    transition: 0.3s;
+}
+
+.btn-nova-conta:hover {
+    background: #e3f2fd;
+    transform: translateY(-2px);
 }
