@@ -22,164 +22,216 @@
     <link rel="stylesheet" href="../private/includes/bootstrap/bootstrap.min.css">
 
 </head>
-<body>
-    
-<!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <img src="../private/includes/img/logo_azul_125.png" alt="Logo Vila Baleira Web" height="45">
-                <h3 style="color: #1976d2; margin: 0;">Hospital Praia Dourada</h3>
-            </div>
+<body style="background-color: #f8fbff;">
+
+<aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header border-bottom bg-light">
+        <div class="d-flex align-items-center gap-2">
+            <img src="../private/includes/img/logo_azul_125.png" alt="Logo" height="30">
+            <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
         </div>
-        
-        <ul class="sidebar-menu">
-            <li><a href="../private/index_private.html">Dashboard Geral</a></li>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column p-0 py-4">
+        <ul class="sidebar-menu w-100">
+            <li><a href="../private/index_private.html" >Dashboard Geral</a></li>
             <li><a href="../private/equipamentos.html" class="ativo">Equipamentos</a></li>
             <li><a href="../private/componentes.html">Componentes</a></li>
             <li><a href="../private/categorias.html">Categorias</a></li>
-            <li><a href="../private/localizacoes.html">Localizações</a></li>
+            <li><a href="../private/views/localizacoes/localizacoes.html" >Localizações</a></li>
             <li><a href="../private/fornecedores.html">Fornecedores</a></li>
             <li><a href="../private/documentacao.html">Documentação</a></li>
             <li><a href="../private/garantiascontratos.html">Garantias & Contratos</a></li>
         </ul>
-
-    </aside>
-
-<!-- Conteúdo Principal-->
-    <main class="main-content" style="padding-top: 0; padding-left: 0; padding-right: 0;">
-        <header class="cabecalho-dashboard" style="padding: 20px 30px; margin: 0;">
-            <div>
-                <h1>Gestão de Equipamentos</h1>
-                <p style="color: #666;">Consulta, pesquisa e gestão detalhada de todo o inventário.</p>
-            </div>
-            <div class="dropdown">
-                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
-                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd;">
-                    <i class="fa-regular fa-user me-1"></i> <strong>Utilizador</strong> - Data
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow">
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-danger" href="../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
-                </ul>
-            </div>
-        </header>
-
-        <section class="seccao-tabela">
+    </div>
+</aside>
+<!-- Conteúdo Principal e Navbar-->
+    <main class="main-content w-100" style="padding: 0; min-height: 100vh;">
+    
+    <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <div class="d-flex align-items-center gap-4">
             
-            <div class="barra-filtros">
-                <div class="grupo-pesquisa">
-                    <input type="text" class="input-pesquisa" placeholder="Pesquisar por Código, Nome ou Marca...">
-                    
-                    <select class="select-filtro">
-                        <option value="">Todos os Serviços</option>
-                        <option value="uci">Cuidados Intensivos</option>
-                        <option value="urg">Urgência</option>
-                        <option value="med">Medicina Interna</option>
-                    </select>
+            <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
+                <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
+            </button>
+            
+            <div>
+                <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Gestão de Equipamentos</h1>
+                <p style="color: #666; margin: 0;">Ficha técnica detalhada do dispositivo médico.</p>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
+                    style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
+                <i class="fa-regular fa-user me-1 text-primary"></i> <strong>Utilizador</strong> - Data
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
+            </ul>
+        </div>
+    </header>
 
-                    <select class="select-filtro">
-                        <option value="">Todos os Estados</option>
-                        <option value="ativo">Ativo</option>
-                        <option value="manutencao">Em Manutenção</option>
-                        <option value="calibracao">Em Calibração</option>
-                    </select>
+        <section class="seccao-tabela" style="padding: 30px;">
+            
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                
+                <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 600px;">
+                    
+                    <div class="position-relative flex-grow-1">
+                        <i class="fa-solid fa-magnifying-glass position-absolute text-muted" style="left: 15px; top: 50%; transform: translateY(-50%);"></i>
+                        <input type="text" class="form-control shadow-sm" placeholder="Pesquisar por Código, Nome ou Marca..." style="padding-left: 40px; border-radius: 10px; height: 42px;">
+                    </div>
+                    
+                    <button class="btn btn-outline-primary shadow-sm fw-bold text-nowrap d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#painelFiltros" aria-expanded="false" aria-controls="painelFiltros" style="border-radius: 10px; height: 42px;">
+                        <i class="fa-solid fa-sliders me-2"></i>Filtros
+                    </button>
                 </div>
                 
-                <a href="../private/registarequipamento.html" class="btn-novo-equipamento">+ Novo Equipamento</a>
+                <a href="registarequipamento.html" class="btn shadow-sm text-white text-nowrap fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
+                    <i class="fa-solid fa-plus me-2"></i>Novo Equipamento
+                </a>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Equipamento / Marca</th>
-                        <th>Localização</th>
-                        <th>Próx. Manutenção</th>
-                        <th>Criticidade</th>
-                        <th>Estado</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="codigo-inv">04.002.00</span></td>
-                        <td>
-                            <strong>Monitor Multiparamétrico</strong><br>
-                            <span style="font-size: 0.85rem; color: #888;">Philips IntelliVue MP5</span>
-                        </td>
-                        <td>Cuidados Intensivos</td>
-                        <td>15/11/2026</td>
-                        <td><span class="badge crit-suporte">Suporte Vida</span></td>
-                        <td><span class="badge b-ativo">Ativo</span></td>
-                        <td class="text-center align-middle">
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="../private/detalhes.html" class="btn btn-sm btn-outline-primary" title="Ver Detalhes">
-                                    <i class="fa-solid fa-eye"></i>
-                                </a>
-                                <a href="../private/editar.html" class="btn btn-sm btn-outline-warning" title="Editar">
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                </a> 
-                                <a href="../private/apagar.html" class="btn btn-sm btn-outline-danger" title="Apagar">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="codigo-inv">07.015.01</span></td>
-                        <td>
-                            <strong>Ventilador Pulmonar</strong><br>
-                            <span style="font-size: 0.85rem; color: #888;">Dräger Evita V500</span>
-                        </td>
-                        <td>Cuidados Intensivos</td>
-                        <td>02/09/2026</td>
-                        <td><span class="badge crit-suporte">Suporte Vida</span></td>
-                        <td><span class="badge b-manutencao">Em Manutenção</span></td>
-                        <td class="text-center align-middle">
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="../private/detalhes.html" class="btn btn-sm btn-outline-primary" title="Ver Detalhes">
-                                    <i class="fa-solid fa-eye"></i>
-                                </a>
-                                <a href="../private/editar.html" class="btn btn-sm btn-outline-warning" title="Editar">
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                </a> 
-                                <a href="../private/apagar.html" class="btn btn-sm btn-outline-danger" title="Apagar">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="codigo-inv">12.040.10</span></td>
-                        <td>
-                            <strong>Bomba de Infusão</strong><br>
-                            <span style="font-size: 0.85rem; color: #888;">B. Braun Infusomat</span>
-                        </td>
-                        <td>Serviço de Medicina</td>
-                        <td>20/12/2026</td>
-                        <td><span class="badge crit-media">Média</span></td>
-                        <td><span class="badge b-ativo">Ativo</span></td>
-                        <td class="text-center align-middle">
-                            <div class="d-flex justify-content-center gap-2">
-                                <a href="../private/detalhes.html" class="btn btn-sm btn-outline-primary" title="Ver Detalhes">
-                                    <i class="fa-solid fa-eye"></i>
-                                </a>
-                                <a href="../private/editar.html" class="btn btn-sm btn-outline-warning" title="Editar">
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                </a> 
-                                <a href="../private/apagar.html" class="btn btn-sm btn-outline-danger" title="Apagar">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="collapse mb-4" id="painelFiltros">
+                <div class="card card-body border-0 shadow-sm rounded-4 bg-white">
+                    <h6 class="text-primary fw-bold mb-3"><i class="fa-solid fa-filter me-2"></i>Filtros Específicos</h6>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label fw-bold text-secondary small mb-1">Serviço / Localização</label>
+                            <select class="form-select border-1 shadow-sm rounded-3 bg-light">
+                                <option value="">Todos os Serviços</option>
+                                <option value="uci">Cuidados Intensivos</option>
+                                <option value="urg">Urgência</option>
+                                <option value="med">Medicina Interna</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-bold text-secondary small mb-1">Estado</label>
+                            <select class="form-select border-1 shadow-sm rounded-3 bg-light">
+                                <option value="">Todos os Estados</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="manutencao">Em Manutenção</option>
+                                <option value="calibracao">Em Calibração</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-bold text-secondary small mb-1">Criticidade</label>
+                            <select class="form-select border-1 shadow-sm rounded-3 bg-light">
+                                <option value="">Todas as Criticidades</option>
+                                <option value="suporte">Suporte de Vida</option>
+                                <option value="alta">Alta</option>
+                                <option value="media">Média</option>
+                                <option value="baixa">Baixa</option>
+                            </select>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end gap-2 mt-2">
+                            <button class="btn btn-sm btn-light text-muted fw-bold border rounded-3 px-3 py-2">Limpar</button>
+                            <button class="btn btn-sm btn-primary fw-bold rounded-3 px-3 py-2">Aplicar Filtros</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="paginacao">
+            <div class="card border-0 shadow-sm rounded-4 p-0 mt-2 overflow-hidden">
+                <div class="table-responsive">
+                    <table class="table align-middle table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="text-primary ps-4 py-3">Código</th>
+                                <th class="text-primary py-3">Equipamento / Marca</th>
+                                <th class="text-primary py-3">Localização</th>
+                                <th class="text-primary py-3 text-nowrap">Próx. Manutenção</th>
+                                <th class="text-primary py-3">Criticidade</th>
+                                <th class="text-primary py-3">Estado</th>
+                                <th class="text-primary py-3 text-center">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 py-3"><span class="codigo-inv">04.002.00</span></td>
+                                <td>
+                                    <strong>Monitor Multiparamétrico</strong><br>
+                                    <span style="font-size: 0.85rem; color: #888;">Philips IntelliVue MP5</span>
+                                </td>
+                                <td class="text-muted">Cuidados Intensivos</td>
+                                <td class="text-muted">15/11/2026</td>
+                                <td><span class="badge crit-suporte">Suporte Vida</span></td>
+                                <td><span class="badge b-ativo">Ativo</span></td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a> 
+                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="ps-4 py-3"><span class="codigo-inv">07.015.01</span></td>
+                                <td>
+                                    <strong>Ventilador Pulmonar</strong><br>
+                                    <span style="font-size: 0.85rem; color: #888;">Dräger Evita V500</span>
+                                </td>
+                                <td class="text-muted">Cuidados Intensivos</td>
+                                <td class="text-muted">02/09/2026</td>
+                                <td><span class="badge crit-suporte">Suporte Vida</span></td>
+                                <td><span class="badge b-manutencao">Em Manutenção</span></td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a> 
+                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="ps-4 py-3"><span class="codigo-inv">12.040.10</span></td>
+                                <td>
+                                    <strong>Bomba de Infusão</strong><br>
+                                    <span style="font-size: 0.85rem; color: #888;">B. Braun Infusomat</span>
+                                </td>
+                                <td class="text-muted">Serviço de Medicina</td>
+                                <td class="text-muted">20/12/2026</td>
+                                <td><span class="badge crit-media">Média</span></td>
+                                <td><span class="badge b-ativo">Ativo</span></td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a> 
+                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="paginacao" style="text-align: right; margin-top: 25px;">
                 <button class="pag-num">Anterior</button>
                 <button class="pag-num ativo">1</button>
                 <button class="pag-num">2</button>
@@ -189,6 +241,7 @@
 
         </section>
     </main>
+</div>
 
 <!-- Bootstrap JS and custom JS -->
 <script src="../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
