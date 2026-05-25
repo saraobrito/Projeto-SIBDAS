@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar Localização - Hospital Praia Dourada</title>
+    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
+
+    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
+</head>
+<body style="background-color: #f8fbff;">
+
+<div class="d-flex flex-column flex-lg-row min-vh-100">
+
+    <div class="d-lg-none d-flex align-items-center justify-content-between p-3 border-bottom bg-white sticky-top shadow-sm">
+        <div class="d-flex align-items-center gap-2">
+            <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="35">
+            <h5 class="text-primary m-0 fw-bold" style="color: #1976d2 !important;">Hospital Praia Dourada</h5>
+        </div>
+        <button class="btn border-0 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+            <i class="fa-solid fa-bars fs-3" style="color: #1976d2;"></i>
+        </button>
+    </div>
+
+    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <div class="offcanvas-header border-bottom bg-light">
+            <div class="d-flex align-items-center gap-2">
+                <img src="../../includes/img/logo_azul_125.png  " alt="Logo" height="30">
+                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column p-0 py-4">
+            <ul class="sidebar-menu w-100">
+                <li><a href="../../index_private.html">Dashboard Geral</a></li>
+                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
+                <li><a href="../componentes/componentes.html">Componentes</a></li>
+                <li><a href="../categorias/categorias.html">Categorias</a></li>
+                <li><a href="localizacoes.html" class="ativo">Localizações</a></li> <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
+                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
+                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
+        
+        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div class="d-flex align-items-center gap-4">
+                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2 d-none d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
+                    <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
+                </button>
+                <div>
+                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Registar Nova Localização</h1>
+                    <p style="color: #666; margin: 0;">Insira os dados para criar um novo espaço físico no inventário hospitalar.</p>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
+                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
+                    <i class="fa-regular fa-user me-1 text-primary"></i> <strong>Utilizador</strong> - Data
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="../../../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section style="padding: 30px; display: flex; justify-content: center;">
+            <div class="card w-100 shadow-sm rounded-4 border-0" style="max-width: 900px;">
+                <div class="card-body p-4 p-md-5">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0 text-dark fw-bold">
+                            <i class="fa-solid fa-map-location-dot me-2" style="color: #2196f3;"></i> Dados do Espaço Físico
+                        </h2>
+                    </div>
+                    <hr class="mb-4">
+
+                    <form action="localizacoes.html" method="POST">
+
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Estrutura Física</h5>
+                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label for="edificio">Edifício *</label>
+                                    <select id="edificio" name="edificio" required>
+                                        <option value="">Selecione o edifício...</option>
+                                        <option value="principal">Edifício Principal</option>
+                                        <option value="bloco-sul">Bloco Sul</option>
+                                        <option value="anexo-consultas">Anexo Consultas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label for="piso">Piso *</label>
+                                    <select id="piso" name="piso" required>
+                                        <option value="">Selecione o piso...</option>
+                                        <option value="-1">Piso -1</option>
+                                        <option value="0">Piso 0</option>
+                                        <option value="1">Piso 1</option>
+                                        <option value="2">Piso 2</option>
+                                        <option value="3">Piso 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="custom-input-group mb-0">
+                                    <label for="servico">Serviço / Departamento *</label>
+                                    <input type="text" id="servico" name="servico" placeholder="Ex: Urgência, Cuidados Intensivos..." required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="custom-input-group mb-0">
+                                    <label for="sala">Sala / Gabinete *</label>
+                                    <input type="text" id="sala" name="sala" placeholder="Ex: Sala de Triagem 1, Box 4..." required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">2. Informações de Gestão Interna</h5>
+                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label for="responsavel">Responsável do Serviço / Espaço</label>
+                                    <input type="text" id="responsavel" name="responsavel" placeholder="Nome do médico ou enfermeiro chefe">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label for="extensao">Extensão Telefónica</label>
+                                    <input type="number" id="extensao" name="extensao" placeholder="Ex: 4501">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="custom-input-group mb-0">
+                                    <label for="centro_custo">Centro de Custo</label>
+                                    <input type="text" id="centro_custo" name="centro_custo" placeholder="Ex: CC-URG-01">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="custom-input-group mb-0">
+                                    <label for="tipo_zona">Tipo de Zona</label>
+                                    <select id="tipo_zona" name="tipo_zona">
+                                        <option value="clinica" selected>Área Clínica / Tratamento</option>
+                                        <option value="tecnica">Área Técnica / Armazém</option>
+                                        <option value="administrativa">Área Administrativa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">3. Observações e Equipamentos</h5>
+                        <div class="bg-light rounded-4 p-3 border-start border-4 border-info shadow-sm mb-4">
+                            <div class="custom-input-group mb-0">
+                                <label for="observacoes"><i class="fa-solid fa-circle-info me-1"></i> Notas sobre a Localização e Equipamentos Afetos</label>
+                                <textarea id="observacoes" name="observacoes" rows="3" placeholder="Indique restrições de acesso ou equipamentos alocados a esta sala (Ex: Apenas permite a entrada de 1 Ventilador (07.xxx) e 2 Monitores (04.xxx))"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-3 mt-4 border-top pt-4">
+                            <a href="localizacoes.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
+                                <i class="fa-solid fa-xmark me-2"></i> Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #2196f3; border-color: #2196f3;">
+                                <i class="fa-solid fa-location-crosshairs me-2"></i> Salvar Localização
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
