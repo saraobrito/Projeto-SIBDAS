@@ -121,6 +121,9 @@ body {
 .custom-input-group input[type="text"],
 .custom-input-group input[type="number"],
 .custom-input-group input[type="date"],
+.custom-input-group input[type="email"],
+.custom-input-group input[type="tel"],
+.custom-input-group input[type="url"],
 .custom-input-group select,
 .custom-input-group textarea {
     width: 100% !important;

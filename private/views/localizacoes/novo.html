@@ -20,48 +20,41 @@
 
 <div class="d-flex flex-column flex-lg-row min-vh-100">
 
-    <div class="d-lg-none d-flex align-items-center justify-content-between p-3 border-bottom bg-white sticky-top shadow-sm">
+    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header border-bottom bg-light">
         <div class="d-flex align-items-center gap-2">
-            <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="35">
-            <h5 class="text-primary m-0 fw-bold" style="color: #1976d2 !important;">Hospital Praia Dourada</h5>
+            <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
+            <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
         </div>
-        <button class="btn border-0 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
-            <i class="fa-solid fa-bars fs-3" style="color: #1976d2;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
     </div>
 
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png  " alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="../componentes/componentes.html">Componentes</a></li>
-                <li><a href="../categorias/categorias.html">Categorias</a></li>
-                <li><a href="localizacoes.html" class="ativo">Localizações</a></li> <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
+    <div class="offcanvas-body d-flex flex-column p-0 py-4">
+        <ul class="sidebar-menu w-100">
+            <li><a href="../../index_private.html">Dashboard Geral</a></li>
+            <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
+            <li><a href="../private/views/componentes/componentes.html">Componentes</a></li>
+            <li><a href="../private/views/categorias/categorias.html">Categorias</a></li>
+            <li><a href="../private/views/localizacoes/localizacoes.html"class="ativo" >Localizações</a></li>
+            <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
+            <li><a href="../private/views/documentacao/documentacao.html">Documentação</a></li>
+            <li><a href="../private/views/garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
+        </ul>
+    </div>
+</aside>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
         <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
             <div class="d-flex align-items-center gap-4">
-                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2 d-none d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
+                
+                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
                     <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
                 </button>
+                
                 <div>
-                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Registar Nova Localização</h1>
-                    <p style="color: #666; margin: 0;">Insira os dados para criar um novo espaço físico no inventário hospitalar.</p>
+                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Gestão de Localizações</h1>
+                    <p style="color: #666; margin: 0;">Estruturação física e organização dos espaços do hospital.</p>
                 </div>
             </div>
             
