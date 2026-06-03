@@ -3,66 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipamentos Médicos - Hospital Praia Dourada</title>
-    <!-- favicon -->
+    <title>Registar Equipamento - Hospital Praia Dourada</title>
     <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    
-    <!-- folha de estilos CSS -->
     <link rel="stylesheet" href="../../includes/css/1231266_private.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-
-    <!-- Bootstrap CSS & custom CSS -->
+    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
     <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-
 </head>
 <body style="background-color: #f8fbff;">
 
-<aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-    <div class="offcanvas-header border-bottom bg-light">
-        <div class="d-flex align-items-center gap-2">
-            <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-            <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-    </div>
+<div class="d-flex flex-column flex-lg-row min-vh-100">
 
-    <div class="offcanvas-body d-flex flex-column p-0 py-4">
-        <ul class="sidebar-menu w-100">
-            <li><a href="../../index_private.html">Dashboard Geral</a></li>
-            <li><a href="../equipamentos/equipamentos.html" class="ativo" >Equipamentos</a></li>
-            <li><a href="../componentes/componentes.html">Componentes</a></li>
-            <li><a href="../categorias/categorias.html">Categorias</a></li>
-            <li><a href="../localizacoes/localizacoes.html" >Localizações</a></li>
-            <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-            <li><a href="../documentacao/documentacao.html">Documentação</a></li>
-            <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-        </ul>
-    </div>
-</aside>
-<!-- Conteúdo Principal e Navbar-->
-    <main class="main-content w-100" style="padding: 0; min-height: 100vh;">
-    
-    <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-        <div class="d-flex align-items-center gap-4">
-            
-            <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
-                <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
-            </button>
-            
-            <div>
-                <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Gestão de Equipamentos</h1>
-                <p style="color: #666; margin: 0;">Ficha técnica detalhada do dispositivo médico.</p>
+    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <div class="offcanvas-header border-bottom bg-light">
+            <div class="d-flex align-items-center gap-2">
+                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
+                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
             </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body d-flex flex-column p-0 py-4">
+            <ul class="sidebar-menu w-100">
+                <li><a href="../../index_private.html">Dashboard Geral</a></li>
+                <li><a href="equipamentos.html" class="ativo">Equipamentos</a></li>
+                <li><a href="../componentes/componentes.html">Componentes</a></li>
+                <li><a href="../categorias/categorias.html">Categorias</a></li>
+                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
+                <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
+                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
+                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
-        <div class="dropdown">
+        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div class="d-flex align-items-center gap-4">
+                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+                    <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
+                </button>
+                <div>
+                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Registar Equipamento</h1>
+                    <p style="color: #666; margin: 0;">Introduza os detalhes técnicos e clínicos do novo dispositivo.</p>
+                </div>
+            </div>
+
+            <div class="dropdown">
             <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
                     style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
                 <i class="fa-regular fa-user me-1 text-primary"></i> <strong>Utilizador</strong> - Data
@@ -74,137 +63,135 @@
                 <li><a class="dropdown-item text-danger" href="../../../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
             </ul>
         </div>
-    </header>
+        </header>
 
-        <section class="seccao-tabela" style="text-align: left;">
-            
-            <form action="../equipamentos/equipamentos.html" method="POST">
-                
-                <h3 style="color: #1976d2; margin-bottom: 20px; border-bottom: 2px solid #e3f2fd; padding-bottom: 5px;">
-                    1. Identificação do Dispositivo
-                </h3>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
-                    <div class="input-group">
-                        <label for="codigo_interno">Código Interno de Inventário *</label>
-                        <input type="text" id="codigo_interno" name="codigo_interno" placeholder="Ex: 04.002.00" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="designacao">Designação do Equipamento *</label>
-                        <input type="text" id="designacao" name="designacao" placeholder="Ex: Ventilador Pulmonar" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="marca">Marca *</label>
-                        <input type="text" id="marca" name="marca" placeholder="Ex: Dräger" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="modelo">Modelo *</label>
-                        <input type="text" id="modelo" name="modelo" placeholder="Ex: Evita V500" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="num_serie">Número de Série *</label>
-                        <input type="text" id="num_serie" name="num_serie" placeholder="Insira o S/N do fabricante" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="fabricante">Fabricante *</label>
-                        <input type="text" id="fabricante" name="fabricante" placeholder="Ex: Dräger Medical" required>
-                    </div>
+        <section style="padding: 30px; display: flex; justify-content: center;">
+            <div class="card w-100 shadow-sm rounded-4 border-0" style="max-width: 900px;">
+                <div class="card-body p-4 p-md-5">
+                    
+                    <h2 class="mb-4 text-dark fw-bold">
+                        <i class="fa-solid fa-laptop-medical me-2" style="color: #2196f3;"></i> Dados do Equipamento
+                    </h2>
+                    <hr class="mb-4">
+
+                    <form action="equipamentos.html" method="POST">
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação do Dispositivo</h5>
+                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Código Interno de Inventário *</label>
+                                    <input type="text" placeholder="Ex: 04.002.00" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Designação do Equipamento *</label>
+                                    <input type="text" placeholder="Ex: Ventilador Pulmonar" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Marca *</label>
+                                    <input type="text" placeholder="Ex: Dräger" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Modelo *</label>
+                                    <input type="text" placeholder="Ex: Evita V500" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Número de Série *</label>
+                                    <input type="text" placeholder="Insira o S/N do fabricante" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Fabricante *</label>
+                                    <input type="text" placeholder="Ex: Dräger Medical" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">2. Classificação e Estado Clínico</h5>
+                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Categoria / Grupo *</label>
+                                    <select required><option>Selecione uma categoria...</option></select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Nível de Criticidade Clínica *</label>
+                                    <select required><option>Selecione a criticidade...</option></select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Estado Atual do Equipamento *</label>
+                                    <select required><option>Selecione o estado...</option></select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Localização Atual (Serviço) *</label>
+                                    <select required><option>Selecione o serviço hospitalar...</option></select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">3. Detalhes de Aquisição e Observações</h5>
+                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Data de Aquisição *</label>
+                                    <input type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Ano de Fabrico *</label>
+                                    <input type="number" placeholder="Ex: 2024" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Custo de Aquisição (€) *</label>
+                                    <input type="number" step="0.01" placeholder="Ex: 14500.00" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label>Tipo de Entrada *</label>
+                                    <select required><option>Compra</option></select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="custom-input-group mb-0">
+                                    <label>Observações / Notas Técnicas</label>
+                                    <textarea rows="2" placeholder="Insira notas adicionais..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-3 mt-4 border-top pt-4">
+                            <a href="equipamentos.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
+                                <i class="fa-solid fa-xmark me-2"></i> Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #2196f3; border-color: #2196f3;">
+                                <i class="fa-solid fa-plus me-2"></i> Salvar Equipamento
+                            </button>
+                        </div>
+                    </form>
                 </div>
-
-                <h3 style="color: #1976d2; margin-bottom: 20px; border-bottom: 2px solid #e3f2fd; padding-bottom: 5px;">
-                    2. Classificação e Estado Clínico
-                </h3>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
-                    <div class="input-group">
-                        <label for="categoria">Categoria / Grupo *</label>
-                        <select id="categoria" name="categoria" class="select-filtro" style="width: 100%; background: #f8fbff;" required>
-                            <option value="">Selecione uma categoria...</option>
-                            <option value="monitorizacao">Monitorização</option>
-                            <option value="suporte_vida">Suporte de Vida</option>
-                            <option value="terapia">Terapia</option>
-                            <option value="diagnostico">Diagnóstico</option>
-                            <option value="laboratorio">Laboratório</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label for="criticidade">Nível de Criticidade Clínica *</label>
-                        <select id="criticidade" name="criticidade" class="select-filtro" style="width: 100%; background: #f8fbff;" required>
-                            <option value="">Selecione a criticidade...</option>
-                            <option value="baixa">Baixa Impacto</option>
-                            <option value="media">Média</option>
-                            <option value="alta">Alta</option>
-                            <option value="suporte_vida">Suporte de Vida</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label for="estado_atual">Estado Atual do Equipamento *</label>
-                        <select id="estado_atual" name="estado_atual" class="select-filtro" style="width: 100%; background: #f8fbff;" required>
-                            <option value="">Selecione o estado...</option>
-                            <option value="ativo">Ativo</option>
-                            <option value="manutencao">Em Manutenção</option>
-                            <option value="calibracao">Em Calibração</option>
-                            <option value="quarentena">Em Quarentena</option>
-                            <option value="inativo">Inativo / Abatido</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label for="localizacao">Localização Atual (Serviço) *</label>
-                        <select id="localizacao" name="localizacao" class="select-filtro" style="width: 100%; background: #f8fbff;" required>
-                            <option value="">Selecione o serviço hospitalar...</option>
-                            <option value="uci">Cuidados Intensivos (UCI)</option>
-                            <option value="urgencias">Urgência</option>
-                            <option value="medicina">Medicina Interna</option>
-                            <option value="bloco_operatorio">Bloco Operatório</option>
-                        </select>
-                    </div>
-                </div>
-
-                <h3 style="color: #1976d2; margin-bottom: 20px; border-bottom: 2px solid #e3f2fd; padding-bottom: 5px;">
-                    3. Detalhes de Aquisição e Observações
-                </h3>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
-                    <div class="input-group">
-                        <label for="data_aquisicao">Data de Aquisição *</label>
-                        <input type="date" id="data_aquisicao" name="data_aquisicao" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="ano_fabrico">Ano de Fabrico *</label>
-                        <input type="number" id="ano_fabrico" name="ano_fabrico" min="1980" max="2026" placeholder="Ex: 2024" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="custo_aquisicao">Custo de Aquisição (€) *</label>
-                        <input type="number" id="custo_aquisicao" name="custo_aquisicao" step="0.01" placeholder="Ex: 14500.00" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="tipo_entrada">Tipo de Entrada *</label>
-                        <select id="tipo_entrada" name="tipo_entrada" class="select-filtro" style="width: 100%; background: #f8fbff;" required>
-                            <option value="compra">Compra</option>
-                            <option value="doacao">Doação</option>
-                            <option value="aluguer">Aluguer</option>
-                            <option value="emprestimo">Empréstimo</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="input-group" style="margin-bottom: 30px;">
-                    <label for="observacoes">Observações / Notas Técnicas</label>
-                    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Insira aqui notas adicionais relevantes sobre o equipamento..." style="width: 100%; padding: 12px 15px; border: 1px solid #bbdefb; border-radius: 10px; font-family: inherit; resize: vertical; outline: none; background: #f8fbff;"></textarea>
-                </div>
-
-                <div style="display: flex; justify-content: flex-end; gap: 15px; border-top: 2px solid #e3f2fd; padding-top: 20px;">
-                    <a href="../equipamentos/equipamentos.html" class="btn-sair" style="padding: 12px 25px; line-height: 1; margin: 0;">Cancelar</a>
-                    <button type="submit" class="btn-novo-equipamento" style="border: none; cursor: pointer; padding: 12px 30px;">Salvar Equipamento</button>
-                </div>
-
-            </form>
-
+            </div>
         </section>
     </main>
+</div>
 
-<!-- Bootstrap JS and custom JS -->
-<script src="../../../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
-
+<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
