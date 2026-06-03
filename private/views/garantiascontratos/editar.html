@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registar Documento - Hospital Praia Dourada</title>
+    <title>Editar Garantia/Contrato - Hospital Praia Dourada</title>
     <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
     <link rel="stylesheet" href="../../includes/css/1231266_private.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,6 @@
 
 <div class="d-flex flex-column flex-lg-row min-vh-100">
 
-    <!-- SIDEBAR -->
     <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-header border-bottom bg-light">
             <div class="d-flex align-items-center gap-2">
@@ -25,7 +24,6 @@
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
         </div>
-
         <div class="offcanvas-body d-flex flex-column p-0 py-4">
             <ul class="sidebar-menu w-100">
                 <li><a href="../../index_private.html">Dashboard Geral</a></li>
@@ -34,28 +32,27 @@
                 <li><a href="../categorias/categorias.html">Categorias</a></li>
                 <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
                 <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-                <li><a href="documentacao.html" class="ativo">Documentação</a></li> <!-- Marcado como ativo -->
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
+                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
+                <li><a href="garantiascontratos.html" class="ativo">Garantias & Contratos</a></li>
             </ul>
         </div>
     </aside>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
-        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
             <div class="d-flex align-items-center gap-4">
-                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
+                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
                     <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
                 </button>
                 <div>
-                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Registar Documento</h1>
-                    <p style="color: #666; margin: 0;">Submeter novo manual, certificado ou norma técnica ao sistema.</p>
+                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Editar Garantia/Contrato</h1>
+                    <p style="color: #666; margin: 0;">Modifique os prazos e condições contratuais do equipamento.</p>
                 </div>
             </div>
 
             <div class="dropdown">
-                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
-                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
+                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
                     <i class="fa-regular fa-user me-1 text-primary"></i> <strong>Utilizador</strong> - Data
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow border-0">
@@ -71,75 +68,73 @@
             <div class="card w-100 shadow-sm rounded-4 border-0" style="max-width: 900px;">
                 <div class="card-body p-4 p-md-5">
                     
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="mb-0 text-dark fw-bold">
-                            <i class="fa-solid fa-file-circle-plus me-2" style="color: #2196f3;"></i> Detalhes do Documento
-                        </h2>
-                    </div>
+                    <h2 class="mb-4 text-dark fw-bold">
+                        <i class="fa-solid fa-pen-to-square me-2" style="color: #ff9800;"></i> Editar Dados
+                    </h2>
                     <hr class="mb-4">
 
-                    <form action="documentacao.html" method="POST" enctype="multipart/form-data">
+                    <form action="garantiascontratos.html" method="POST">
 
-                        <!-- Bloco 1: Identificação -->
-                        <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Informação do Ficheiro</h5>
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Datas de Garantia</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
-                            <div class="col-md-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
-                                    <label for="nome_doc">Designação do Documento *</label>
-                                    <input type="text" id="nome_doc" name="nome_doc" placeholder="Ex: Manual de Utilizador - Ventilador V500" required>
+                                    <label for="data_inicio">Data de Início *</label>
+                                    <input type="date" id="data_inicio" name="data_inicio" value="2024-07-15" required>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
-                                    <label for="categoria">Categoria *</label>
-                                    <select id="categoria" name="categoria" required>
-                                        <option value="">Selecione a categoria...</option>
-                                        <option value="manual">Manual de Utilizador</option>
-                                        <option value="calibracao">Certificado de Calibração</option>
-                                        <option value="garantia">Garantia / Contrato</option>
-                                        <option value="norma">Norma Técnica</option>
+                                    <label for="data_fim">Data de Fim *</label>
+                                    <input type="date" id="data_fim" name="data_fim" value="2026-07-15" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">2. Detalhes do Contrato</h5>
+                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label for="tipo_contrato">Tipo de Contrato</label>
+                                    <select id="tipo_contrato" name="tipo_contrato">
+                                        <option value="nenhum">Nenhum</option>
+                                        <option value="preventiva" selected>Manutenção Preventiva</option>
+                                        <option value="corretiva">Manutenção Corretiva</option>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="custom-input-group mb-0">
+                                    <label for="entidade">Entidade Responsável</label>
+                                    <input type="text" id="entidade" name="entidade" value="Dräger Portugal, Lda">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="custom-input-group mb-0">
-                                    <label for="arquivo">Ficheiro (PDF/Word) *</label>
-                                    <input type="file" id="arquivo" name="arquivo" required style="padding-top: 8px;">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloco 2: Associação -->
-                        <h5 class="fw-bold mb-3" style="color: #1976d2;">2. Associação a Equipamento</h5>
-                        <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
-                            <div class="col-md-12">
-                                <div class="custom-input-group mb-0">
-                                    <label for="equipamento_id">Equipamento Relacionado *</label>
-                                    <select id="equipamento_id" name="equipamento_id" required>
-                                        <option value="">Selecione o equipamento no inventário...</option>
-                                        <option value="04.002.00">04.002.00 - Ventilador Pulmonar V500</option>
-                                        <option value="07.015.01">07.015.01 - Monitor Multiparamétrico MP5</option>
+                                    <label for="periodicidade">Periodicidade</label>
+                                    <select id="periodicidade" name="periodicidade">
+                                        <option value="anual" selected>Anual</option>
+                                        <option value="semestral">Semestral</option>
+                                        <option value="trimestral">Trimestral</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Bloco 3: Observações -->
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">3. Observações</h5>
-                        <div class="bg-light rounded-4 p-3 border-start border-4 border-info shadow-sm mb-4">
+                        <div class="bg-light rounded-4 p-3 border-start border-4 border-warning shadow-sm mb-4">
                             <div class="custom-input-group mb-0">
                                 <label for="observacoes"><i class="fa-solid fa-circle-info me-1"></i> Notas Adicionais</label>
-                                <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Documento relativo à revisão anual de 2026..."></textarea>
+                                <textarea id="observacoes" name="observacoes" rows="3">Contrato renovado em Junho de 2026. Inclui substituição de peças de desgaste.</textarea>
                             </div>
                         </div>
 
-                        <!-- Botões -->
                         <div class="d-flex justify-content-end gap-3 mt-4 border-top pt-4">
-                            <a href="documentacao.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
+                            <a href="garantiascontratos.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
                                 <i class="fa-solid fa-xmark me-2"></i> Cancelar
                             </a>
-                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #2196f3; border-color: #2196f3;">
-                                <i class="fa-solid fa-file-arrow-up me-2"></i> Submeter Documento
+                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #1976d2; border-color: #1976d2;">
+                                <i class="fa-regular fa-floppy-disk me-2"></i> Guardar Alterações
                             </button>
                         </div>
                     </form>
