@@ -1,32 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vila Baleira Web</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../includes/img/logo_cores_125.png" type="image/png">
-    
-    <!-- folha de estilos CSS -->
-    <link rel="stylesheet" href="../includes/css/1231266.css">
+<?php include 'includes/header.php'; ?>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../includes/fontawesome/all.min.css">
-
-    <!-- Bootstrap CSS & custom CSS -->
-    <link rel="stylesheet" href="../includes/bootstrap/bootstrap.min.css">
-
-</head>
 <body class="body-auth">
 
     <div class="auth-card" style="padding: 25px 30px;">
-        <img src="../includes/img/logo_cores_125.png" alt="Logo" style="height: 45px; margin-bottom: 10px;">
+        <img src="/Projeto SIBDAS/public/includes/img/logo_cores_125.png" alt="Logo" style="height: 45px; margin-bottom: 10px;">
         <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Criar Conta</h2>
         
-        <form action="login.html" method="POST">
+        <form action="/Projeto SIBDAS/public/login.php" method="POST">
             <div class="custom-input-group" style="margin-bottom: 12px;">
                 <label for="nome" style="margin-bottom: 5px;"><i class="fa-solid fa-user me-2 text-primary-soft"></i>Nome Completo</label>
                 <input type="text" id="nome" name="nome" placeholder="Insira o seu nome" required style="padding: 8px 15px;">
@@ -47,13 +27,12 @@
         
         <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
             <p class="auth-link" style="margin-bottom: 10px; color: #666;">
-                Já tem conta? <a href="login.html" style="font-weight: 700; margin-left: 5px;">Fazer Login</a>
+                Já tem conta? <a href="/Projeto SIBDAS/public/login.php" style="font-weight: 700; margin-left: 5px;">Fazer Login</a>
             </p>
             <p class="auth-link" style="margin-bottom: 0;">
-                <a href="../index.html"><i class="fa-solid fa-arrow-left me-2"></i>Voltar à página principal</a>
+                <a href="/Projeto SIBDAS/public/index.php"><i class="fa-solid fa-arrow-left me-2"></i>Voltar à página principal</a>
             </p>
         </div>
     </div>
 
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>

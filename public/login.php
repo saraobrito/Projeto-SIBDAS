@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vila Baleira Web</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../includes/img/logo_cores_125.png" type="image/png">
-    
-    <!-- folha de estilos CSS -->
-    <link rel="stylesheet" href="../includes/css/1231266.css">
+<?php include 'includes/header.php'; ?>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../includes/fontawesome/all.min.css">
-
-    <!-- Bootstrap CSS & custom CSS -->
-    <link rel="stylesheet" href="../includes/bootstrap/bootstrap.min.css">
-
-</head>
 <body class="body-auth">
 
     <div class="auth-card" style="padding: 25px 30px;">
-        <img src="../includes/img/logo_cores_125.png" alt="Logo" style="height: 50px; margin-bottom: 10px;">
+        <img src="/Projeto SIBDAS/public/includes/img/logo_cores_125.png" alt="Logo" style="height: 50px; margin-bottom: 10px;">
         <h2 style="font-size: 1.6rem; margin-bottom: 5px;">Acesso Profissional</h2>
         <p class="subtitle" style="margin-bottom: 20px;">Área reservada a funcionários e corpo clínico.</p>
         
-        <form action="../../private/index_private.html">
+        <form action="/Projeto SIBDAS/private/index_private.php">
             <div class="custom-input-group" style="margin-bottom: 15px;">
                 <label for="email" style="margin-bottom: 5px;"><i class="fa-solid fa-envelope me-2 text-primary-soft"></i>E-mail</label>
                 <input type="email" id="email" name="email" placeholder="Insira o seu e-mail" required style="padding: 10px 15px;">
@@ -42,13 +22,12 @@
         </form>
         
         <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-            <a href="registo.html" class="btn-nova-conta" style="padding: 10px;"><i class="fa-solid fa-user-plus me-2"></i>Criar Nova Conta</a>
+            <a href="/Projeto SIBDAS/public/registo.php" class="btn-nova-conta" style="padding: 10px;"><i class="fa-solid fa-user-plus me-2"></i>Criar Nova Conta</a>
         </div>
         
         <p class="auth-link" style="margin-top: 15px; margin-bottom: 0;">
-            <a href="../index.html"><i class="fa-solid fa-arrow-left me-2"></i>Voltar à página principal</a>
+            <a href="/Projeto SIBDAS/public/index.php"><i class="fa-solid fa-arrow-left me-2"></i>Voltar à página principal</a>
         </p>
     </div>
 
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>

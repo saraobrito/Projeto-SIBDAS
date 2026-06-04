@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vila Baleira Web</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../public/includes/img/logo_cores_125.png" type="image/png">
-    
-    <!-- folha de estilos CSS -->
-    <link rel="stylesheet" href="../public/includes/css/1231266.css">
+ 
+<?php include 'includes/header.php'; ?>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../public/includes/fontawesome/all.min.css">
-
-    <!-- Bootstrap CSS & custom CSS -->
-    <link rel="stylesheet" href="../public/includes/bootstrap/bootstrap.min.css">
-
-</head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-principal" data-bs-offset="100" tabindex="0">
 
     <nav id="navbar-principal" class="navbar navbar-expand-lg border-bottom sticky-top py-3 px-4 shadow-sm nav-bg-clara">
@@ -29,7 +9,7 @@
             
             <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#home">
                 <img src="../public/includes/img/logo_cores_125.png" alt="Logo Vila Baleira Web" height="40" onerror="this.src='https://via.placeholder.com/40?text=Logo'">
-                <h4 class="text-primary-soft fw-bold mb-0">Vila Baleira Web</h4>
+                <h4 class="text-primary-soft fw-bold mb-0"><?php echo APP_NAME1; ?></h4>
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +26,7 @@
                 </ul>
 
                 <div class="d-flex justify-content-center">
-                    <a href="../public/login/login.html" class="btn btn-login rounded-pill shadow-sm fw-bold px-4 py-2 d-flex align-items-center gap-2">
+                    <a href="/Projeto SIBDAS/public/login.php" class="btn btn-login rounded-pill shadow-sm fw-bold px-4 py-2 d-flex align-items-center gap-2">
                         <i class="fa-regular fa-user"></i> Login
                     </a>
                 </div>
@@ -57,9 +37,9 @@
 
     <section id="home" class="py-5 text-center bg-white border-bottom" style="padding-top: 100px !important; padding-bottom: 100px !important;">
         <div class="container py-5">
-            <h1 class="display-4 fw-bold text-primary-soft mb-3">Vila Baleira Web</h1>
+            <h1 class="display-4 fw-bold text-primary-soft mb-3"><?php echo APP_NAME1; ?></h1>
             <p class="lead text-secondary mb-4">Inovação e tecnologia de ponta dedicadas exclusivamente à gestão na área da saúde.</p>
-            <a href="../public/login/registo.html" class="btn btn-primary-soft rounded-pill px-5 py-3 fw-bold shadow-sm">Criar Conta</a>
+            <a href="/Projeto SIBDAS/public/registo.php" class="btn btn-primary-soft rounded-pill px-5 py-3 fw-bold shadow-sm">Criar Conta</a>
         </div>
     </section>
 
@@ -69,7 +49,7 @@
                 <div class="col-lg-8">
                     <h2 class="text-primary-soft fw-bold">A Nossa Empresa & Missão</h2>
                     <p class="lead text-secondary mt-3">
-                        A <strong>Vila Baleira Web</strong> é uma empresa tecnológica especializada no desenvolvimento de soluções digitais para o setor da saúde. 
+                        A <strong><?php echo APP_NAME1; ?></strong> é uma empresa tecnológica especializada no desenvolvimento de soluções digitais para o setor da saúde. 
                         A nossa <strong>missão</strong> é simplificar o dia a dia dos profissionais de saúde e engenheiros biomédicos, oferecendo ferramentas robustas, seguras e intuitivas.
                     </p>
                 </div>
@@ -175,12 +155,8 @@
 
     <footer class="bg-dark text-white py-4 text-center">
         <div class="container">
-            <p class="mb-0 fw-light">© 2024 Vila Baleira Web - Soluções Tecnológicas para a Saúde</p>
+            <p class="mb-0 fw-light">© 2026 <?php echo APP_NAME1; ?> - Soluções Tecnológicas para a Saúde</p>
         </div>
     </footer>
 
-<!-- Bootstrap JS and custom JS -->
-<script src="../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
