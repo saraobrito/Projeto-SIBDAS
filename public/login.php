@@ -7,7 +7,7 @@
         <h2 style="font-size: 1.6rem; margin-bottom: 5px;">Acesso Profissional</h2>
         <p class="subtitle" style="margin-bottom: 20px;">Área reservada a funcionários e corpo clínico.</p>
         
-        <form action="/Projeto SIBDAS/private/index_private.php">
+        <form action="/Projeto SIBDAS/private/views/index/index_private.php">
             <div class="custom-input-group" style="margin-bottom: 15px;">
                 <label for="email" style="margin-bottom: 5px;"><i class="fa-solid fa-envelope me-2 text-primary-soft"></i>E-mail</label>
                 <input type="email" id="email" name="email" placeholder="Insira o seu e-mail" required style="padding: 10px 15px;">

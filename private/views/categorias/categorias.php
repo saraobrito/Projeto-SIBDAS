@@ -1,39 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias - Hospital Praia Dourada</title>
-    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
-    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-</head>
+<?php
+    $page_title = "Categorias - Hospital Praia Dourada";
+    include '../../includes/header.php';
+    $pagina_ativa = 'categorias';
+?>
+
+
 <body style="background-color: #f8fbff;">
 
-<div class="d-flex flex-column flex-lg-row min-vh-100">
+    <?php include '../../includes/sidebar.php'; ?>
 
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="../componentes/componentes.html">Componentes</a></li>
-                <li><a href="categorias.html" class="ativo">Categorias</a></li>
-                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
-                <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
@@ -56,7 +31,7 @@
                     <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
                     <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-danger" href="../../../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
+                    <li><a class="dropdown-item text-danger" href="/Projeto SIBDAS/public/index.php"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
                 </ul>
             </div>
         </header>
@@ -73,7 +48,7 @@
                         <i class="fa-solid fa-sliders me-2"></i>Filtros
                     </button>
                 </div>
-                <a href="novo.html" class="btn shadow-sm text-white fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
+                <a href="/Projeto SIBDAS/private/views/categorias/novo.php" class="btn shadow-sm text-white fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
                     <i class="fa-solid fa-plus me-2"></i> Nova Categoria
                 </a>
             </div>
@@ -119,9 +94,9 @@
                                 <td><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3">142</span></td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3"><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3"><i class="fa-solid fa-trash-can"></i></a>
+                                        <a href="/Projeto SIBDAS/private/views/categorias/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3"><i class="fa-solid fa-eye"></i></a>
+                                        <a href="/Projeto SIBDAS/private/views/categorias/editar.php" class="btn btn-sm btn-outline-warning rounded-3"><i class="fa-regular fa-pen-to-square"></i></a>
+                                        <a href="/Projeto SIBDAS/private/views/categorias/apagar.php" class="btn btn-sm btn-outline-danger rounded-3"><i class="fa-solid fa-trash-can"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -139,6 +114,4 @@
     </main>
 </div>
 
-<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php include '../../includes/footer.php'; ?>

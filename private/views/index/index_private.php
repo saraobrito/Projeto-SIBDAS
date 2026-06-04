@@ -1,51 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipamentos Médicos - Hospital Praia Dourada</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../private/includes/img/logo_azul_125.png" type="image/png">
-    
-    <!-- folha de estilos CSS -->
-    <link rel="stylesheet" href="../private/includes/css/1231266_private.css">
+<?php 
+    include '../../includes/header.php';
+    $pagina_ativa = 'dashboard';
+?>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="../private/includes/fontawesome/all.min.css">
-
-    <!-- Bootstrap CSS & custom CSS -->
-    <link rel="stylesheet" href="../private/includes/bootstrap/bootstrap.min.css">
-
-</head>
 <body style="background-color: #f8fbff;">
 
-<aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-    <div class="offcanvas-header border-bottom bg-light">
-        <div class="d-flex align-items-center gap-2">
-            <img src="../private/includes/img/logo_azul_125.png" alt="Logo" height="30">
-            <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-    </div>
+    <?php include '../../includes/sidebar.php'; ?>
 
-    <div class="offcanvas-body d-flex flex-column p-0 py-4">
-        <ul class="sidebar-menu w-100">
-            <li><a href="../private/index_private.html" class="ativo">Dashboard Geral</a></li>
-            <li><a href="../private/views/equipamentos/equipamentos.html">Equipamentos</a></li>
-            <li><a href="../private/views/componentes/componentes.html">Componentes</a></li>
-            <li><a href="../private/views/categorias/categorias.html">Categorias</a></li>
-            <li><a href="../private/views/localizacoes/localizacoes.html" >Localizações</a></li>
-            <li><a href="../private/views/fornecedores/fornecedores.html">Fornecedores</a></li>
-            <li><a href="../private/views/documentacao/documentacao.html">Documentação</a></li>
-            <li><a href="../private/views/garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-        </ul>
-    </div>
-</aside>
 <!-- Conteúdo Principal e Navbar-->
     <main class="main-content w-100" style="padding: 0; min-height: 100vh;">
     
@@ -165,7 +126,7 @@
                                 <td><span class="badge crit-suporte">Suporte Vida</span></td>
                                 <td><span class="badge b-ativo">Ativo</span></td>
                                 <td class="text-center">
-                                    <a href="../private/views/equipamentos/detalhes.html" class="btn btn-sm btn-warning text-dark rounded-3 border-0 shadow-sm" title="Aviso Importante - Ver Detalhes">
+                                    <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-warning text-dark rounded-3 border-0 shadow-sm" title="Aviso Importante - Ver Detalhes">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </td>
@@ -178,7 +139,7 @@
                                 <td><span class="badge crit-suporte">Suporte Vida</span></td>
                                 <td><span class="badge b-manutencao">Em Manutenção</span></td>
                                 <td class="text-center">
-                                    <a href="../private/views/equipamentos/detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                    <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </td>
@@ -191,7 +152,7 @@
                                 <td><span class="badge crit-media">Média</span></td>
                                 <td><span class="badge b-ativo">Ativo</span></td>
                                 <td class="text-center">
-                                    <a href="../private/views/equipamentos/detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                    <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </td>
@@ -204,7 +165,7 @@
                                 <td><span class="badge crit-alta">Alta</span></td>
                                 <td><span class="badge b-inativo">Em Calibração</span></td>
                                 <td class="text-center">
-                                    <a href="../private/views/equipamentos/detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                    <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </td>
@@ -226,8 +187,4 @@
     </main>
 </div>
 
-<!-- Bootstrap JS and custom JS -->
-<script src="../private/includes/bootstrap/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+<?php include '../../includes/footer.php'; ?>

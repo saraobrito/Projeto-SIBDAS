@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes da Categoria - Hospital Praia Dourada</title>
-    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
-    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-</head>
+<?php
+    $page_title = "Gestão de Categorias - Hospital Praia Dourada";
+    include '../../includes/header.php';
+    $pagina_ativa = 'categorias';
+?>
+
+
 <body style="background-color: #f8fbff;">
 
-<div class="d-flex flex-column flex-lg-row min-vh-100">
-
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="../componentes/componentes.html">Componentes</a></li>
-                <li><a href="categorias.html" class="ativo">Categorias</a></li>
-                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
-                <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
+    <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
@@ -71,10 +45,10 @@
                             <i class="fa-solid fa-layer-group me-2" style="color: #1976d2;"></i> Detalhes da Categoria
                         </h2>
                         <div class="d-flex gap-2">
-                            <a href="editar.html" class="btn btn-outline-warning btn-sm shadow-sm rounded-pill px-3">
+                            <a href="/Projeto SIBDAS/private/views/categorias/editar.php" class="btn btn-outline-warning btn-sm shadow-sm rounded-pill px-3">
                                 <i class="fa-regular fa-pen-to-square me-1"></i> Editar
                             </a>
-                            <a href="apagar.html" class="btn btn-outline-danger btn-sm shadow-sm rounded-pill px-3">
+                            <a href="/Projeto SIBDAS/private/views/categorias/apagar.php" class="btn btn-outline-danger btn-sm shadow-sm rounded-pill px-3">
                                 <i class="fa-solid fa-trash-can me-1"></i> Apagar
                             </a>
                         </div>
@@ -124,7 +98,7 @@
                     </div>
 
                     <div class="d-flex justify-content-end mt-4 border-top pt-4">
-                        <a href="categorias.html" class="btn btn-outline-secondary px-4 shadow-sm rounded-pill">
+                        <a href="/Projeto SIBDAS/private/views/categorias/categorias.php" class="btn btn-outline-secondary px-4 shadow-sm rounded-pill">
                             <i class="fa-solid fa-arrow-left me-2"></i> Voltar
                         </a>
                     </div>
@@ -135,6 +109,4 @@
     </main>
 </div>
 
-<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php include '../../includes/footer.php'; ?>
