@@ -1,8 +1,9 @@
 <?php
-    $page_title = "Gestão de Equipamentos";
+    $page_title = "Gestão de Equipamentos - Hospital Praia Dourada";
     include '../../includes/header.php';
     $pagina_ativa = 'equipamentos';
 ?>
+
 
 <body style="background-color: #f8fbff;">
 
@@ -54,7 +55,7 @@
                     </button>
                 </div>
                 
-                <a href="../equipamentos/novo.html" class="btn shadow-sm text-white text-nowrap fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
+                <a href="/Projeto SIBDAS/private/views/equipamentos/novo.php" class="btn shadow-sm text-white text-nowrap fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
                     <i class="fa-solid fa-plus me-2"></i>Novo Equipamento
                 </a>
             </div>
@@ -126,13 +127,13 @@
                                 <td><span class="badge b-ativo">Ativo</span></td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
-                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/editar.php" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
                                             <i class="fa-regular fa-pen-to-square"></i>
                                         </a> 
-                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/apagar.php" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </a>
                                     </div>
@@ -151,13 +152,13 @@
                                 <td><span class="badge b-manutencao">Em Manutenção</span></td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
-                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/editar.php" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
                                             <i class="fa-regular fa-pen-to-square"></i>
                                         </a> 
-                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/apagar.php" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </a>
                                     </div>
@@ -176,13 +177,13 @@
                                 <td><span class="badge b-ativo">Ativo</span></td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="detalhes.html" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/detalhes.php" class="btn btn-sm btn-outline-primary rounded-3" title="Ver Detalhes">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
-                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/editar.php" class="btn btn-sm btn-outline-warning rounded-3" title="Editar">
                                             <i class="fa-regular fa-pen-to-square"></i>
                                         </a> 
-                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
+                                        <a href="/Projeto SIBDAS/private/views/equipamentos/apagar.php" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </a>
                                     </div>

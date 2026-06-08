@@ -1,42 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Componente - Hospital Praia Dourada</title>
-    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-</head>
+<?php
+    $page_title = "Registar Componente - Hospital Praia Dourada";
+    include '../../includes/header.php';
+    $pagina_ativa = 'componentes';
+?>
+
 <body style="background-color: #f8fbff;">
 
-<div class="d-flex flex-column flex-lg-row min-vh-100">
-
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="componentes.html" class="ativo">Componentes</a></li>
-                <li><a href="../categorias/categorias.html">Categorias</a></li>
-                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
-                <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
+    <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
@@ -46,8 +16,8 @@
                     <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
                 </button>
                 <div>
-                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Editar Componente</h1>
-                    <p style="color: #666; margin: 0;">Atualize as informações técnicas e estado do componente.</p>
+                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Registar Novo Componente</h1>
+                    <p style="color: #666; margin: 0;">Adicione novas peças ou sensores ao inventário.</p>
                 </div>
             </div>
 
@@ -69,27 +39,25 @@
             <div class="card w-100 shadow-sm rounded-4 border-0" style="max-width: 900px;">
                 <div class="card-body p-4 p-md-5">
                     
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="mb-0 text-dark fw-bold">
-                            <i class="fa-solid fa-pen-to-square me-2" style="color: #ff9800;"></i> Editar Dados do Componente
-                        </h2>
-                    </div>
+                    <h2 class="mb-4 text-dark fw-bold">
+                        <i class="fa-solid fa-microchip me-2" style="color: #2196f3;"></i> Dados do Componente
+                    </h2>
                     <hr class="mb-4">
 
-                    <form action="componentes.html" method="POST">
+                    <form action="/Projeto SIBDAS/private/views/componentes/componentes.php" method="POST">
 
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
                             <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
                                     <label for="nome">Designação *</label>
-                                    <input type="text" id="nome" name="nome" value="Sensor SpO2" required>
+                                    <input type="text" id="nome" name="nome" placeholder="Ex: Sensor SpO2" required>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
                                     <label for="serie">Número de Série *</label>
-                                    <input type="text" id="serie" name="serie" value="SN-2026-X99" required>
+                                    <input type="text" id="serie" name="serie" placeholder="Ex: SN-2026-X99" required>
                                 </div>
                             </div>
                         </div>
@@ -100,29 +68,29 @@
                                 <div class="custom-input-group mb-0">
                                     <label for="equipamento_pai">Equipamento Pai *</label>
                                     <select id="equipamento_pai" name="equipamento_pai" required>
-                                        <option value="monitor" selected>Monitor MP5</option>
+                                        <option value="">Selecione o equipamento...</option>
+                                        <option value="monitor">Monitor MP5</option>
                                         <option value="ventilador">Ventilador V500</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
-                                    <label for="estado">Estado *</label>
+                                    <label for="estado">Estado Inicial *</label>
                                     <select id="estado" name="estado" required>
-                                        <option value="operacional" selected>Operacional</option>
+                                        <option value="operacional">Operacional</option>
                                         <option value="manutencao">Em Manutenção</option>
-                                        <option value="avariado">Avariado</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
                         <div class="d-flex justify-content-end gap-3 mt-4 border-top pt-4">
-                            <a href="componentes.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
+                            <a href="/Projeto SIBDAS/private/views/componentes/componentes.php" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
                                 <i class="fa-solid fa-xmark me-2"></i> Cancelar
                             </a>
-                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #1976d2; border-color: #1976d2;">
-                                <i class="fa-regular fa-floppy-disk me-2"></i> Guardar Alterações
+                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #2196f3; border-color: #2196f3;">
+                                <i class="fa-solid fa-plus me-2"></i> Salvar Componente
                             </button>
                         </div>
                     </form>
@@ -132,6 +100,4 @@
     </main>
 </div>
 
-<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php include '../../includes/footer.php'; ?>
