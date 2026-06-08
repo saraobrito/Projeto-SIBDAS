@@ -1,43 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Documento - Hospital Praia Dourada</title>
-    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-</head>
+<?php
+    $page_title = "Editar Documento - Hospital Praia Dourada";
+    include '../../includes/header.php';
+    $pagina_ativa = 'documentacao';
+?>
 <body style="background-color: #f8fbff;">
 
-<div class="d-flex flex-column flex-lg-row min-vh-100">
-
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="../componentes/componentes.html">Componentes</a></li>
-                <li><a href="../categorias/categorias.html">Categorias</a></li>
-                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
-                <li><a href="../fornecedores/fornecedores.html">Fornecedores</a></li>
-                <li><a href="documentacao.html" class="ativo">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
+    <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
@@ -77,7 +45,7 @@
                     </div>
                     <hr class="mb-4">
 
-                    <form action="documentacao.html" method="POST">
+                    <form action="/Projeto SIBDAS/private/views/documentacao/documentacao.php" method="POST">
 
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação do Documento</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
@@ -127,7 +95,7 @@
                         </div>
 
                         <div class="d-flex justify-content-end gap-3 mt-4 border-top pt-4">
-                            <a href="documentacao.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
+                            <a href="/Projeto SIBDAS/private/views/documentacao/documentacao.php" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
                                 <i class="fa-solid fa-xmark me-2"></i> Cancelar
                             </a>
                             <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #1976d2; border-color: #1976d2;">
@@ -141,7 +109,4 @@
     </main>
 </div>
 
-<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+<?php include '../../includes/footer.php'; ?>

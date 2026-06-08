@@ -1,46 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação - Hospital Praia Dourada</title>
-    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    
-    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-
-    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-</head>
+<?php
+    $page_title = "Documentação - Hospital Praia Dourada";
+    include '../../includes/header.php';
+    $pagina_ativa = 'documentacao';
+?>
 <body style="background-color: #f8fbff;">
 
-<div class="d-flex flex-column flex-lg-row min-vh-100">
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="../componentes/componentes.html">Componentes</a></li>
-                <li><a href="../categorias/categorias.html">Categorias</a></li>
-                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
-                <li><a href="../fornecedores/fornecedores.html" >Fornecedores</a></li>
-                <li><a href="../documentacao/documentacao.html" class="ativo">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
+    <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
@@ -83,7 +48,7 @@
                         <i class="fa-solid fa-sliders me-2"></i>Filtros
                     </button>
                 </div>
-                <a href="novo.html" class="btn shadow-sm text-white text-nowrap fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
+                <a href="/Projeto SIBDAS/private/views/documentacao/novo.php" class="btn shadow-sm text-white text-nowrap fw-bold d-flex align-items-center" style="background-color: #2196f3; border-radius: 10px; padding: 0 20px; height: 42px;">
                     <i class="fa-solid fa-file-arrow-up me-2"></i>Novo Documento
                 </a>
             </div>
@@ -142,8 +107,8 @@
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center gap-2">
                                         <a href="#" class="btn btn-sm btn-outline-info rounded-3" title="Download"><i class="fa-solid fa-download"></i></a>
-                                        <a href="editar.html" class="btn btn-sm btn-outline-warning rounded-3" title="Editar"><i class="fa-regular fa-pen-to-square"></i>
-                                        <a href="apagar.html" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar"><i class="fa-solid fa-trash-can"></i></a>
+                                        <a href="/Projeto SIBDAS/private/views/documentacao/editar.php" class="btn btn-sm btn-outline-warning rounded-3" title="Editar"><i class="fa-regular fa-pen-to-square"></i>
+                                        <a href="/Projeto SIBDAS/private/views/documentacao/apagar.php" class="btn btn-sm btn-outline-danger rounded-3" title="Apagar"><i class="fa-solid fa-trash-can"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -154,6 +119,5 @@
         </section>
     </main>
 </div>
-<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+<?php include '../../includes/footer.php'; ?>
