@@ -1,47 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Fornecedor - Hospital Praia Dourada</title>
-    <link rel="shortcut icon" href="../../includes/img/logo_azul_125.png" type="image/png">
-    
-    <link rel="stylesheet" href="../../includes/css/1231266_private.css">
+<?php
+    $page_title = "Registar Fornecedor - Hospital Praia Dourada";
+    include '../../includes/header.php';
+    $pagina_ativa = 'fornecedores';
+?>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../../includes/fontawesome/all.min.css">
-
-    <link rel="stylesheet" href="../../includes/bootstrap/bootstrap.min.css">
-</head>
 <body style="background-color: #f8fbff;">
 
-<div class="d-flex flex-column flex-lg-row min-vh-100">
-
-    <aside class="sidebar offcanvas offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header border-bottom bg-light">
-            <div class="d-flex align-items-center gap-2">
-                <img src="../../includes/img/logo_azul_125.png" alt="Logo" height="30">
-                <h6 class="text-primary m-0 fw-bold" id="sidebarMenuLabel" style="color: #1976d2 !important;">Hospital Praia Dourada</h6>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body d-flex flex-column p-0 py-4">
-            <ul class="sidebar-menu w-100">
-                <li><a href="../../index_private.html">Dashboard Geral</a></li>
-                <li><a href="../equipamentos/equipamentos.html">Equipamentos</a></li>
-                <li><a href="../componentes/componentes.html">Componentes</a></li>
-                <li><a href="../categorias/categorias.html">Categorias</a></li>
-                <li><a href="../localizacoes/localizacoes.html">Localizações</a></li>
-                <li><a href="fornecedores.html" class="ativo">Fornecedores</a></li>
-                <li><a href="../documentacao/documentacao.html">Documentação</a></li>
-                <li><a href="../garantiascontratos/garantiascontratos.html">Garantias & Contratos</a></li>
-            </ul>
-        </div>
-    </aside>
+    <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
@@ -76,32 +41,33 @@
                     
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <h2 class="mb-0 text-dark fw-bold">
-                            <i class="fa-solid fa-pen-to-square me-2" style="color: #ff9800;"></i> Editar Fornecedor
+                            <i class="fa-solid fa-truck-medical me-2" style="color: #2196f3;"></i> Dados da Entidade
                         </h2>
                     </div>
                     <hr class="mb-4">
 
-                    <form action="fornecedores.html" method="POST">
+                    <form action="/Projeto SIBDAS/private/views/fornecedores/fornecedores.php" method="POST">
 
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação da Empresa</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
                             <div class="col-md-12 mb-3">
                                 <div class="custom-input-group mb-0">
                                     <label for="nome_empresa">Nome da Empresa / Entidade *</label>
-                                    <input type="text" id="nome_empresa" name="nome_empresa" value="Dräger Portugal, Lda" required>
+                                    <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Ex: Dräger Portugal, Lda" required>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3 mb-md-0">
                                 <div class="custom-input-group mb-0">
                                     <label for="nif">NIF (Número de Identificação Fiscal) *</label>
-                                    <input type="text" id="nif" name="nif" value="501234567" required>
+                                    <input type="text" id="nif" name="nif" placeholder="Ex: 501234567" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="custom-input-group mb-0">
                                     <label for="tipo_fornecedor">Tipo de Fornecedor *</label>
                                     <select id="tipo_fornecedor" name="tipo_fornecedor" required>
-                                        <option value="fabricante" selected>Fabricante</option>
+                                        <option value="">Selecione o tipo principal...</option>
+                                        <option value="fabricante">Fabricante</option>
                                         <option value="distribuidor">Distribuidor / Fornecedor Comercial</option>
                                         <option value="assistencia">Empresa de Assistência Técnica</option>
                                         <option value="consumiveis">Fornecedor de Consumíveis ou Acessórios</option>
@@ -110,30 +76,30 @@
                             </div>
                         </div>
 
-                        <h5 class="fw-bold mb-3" style="color: #1976d2;">2. Contactos Gerais e Localização</h5>
+                        <h5 class="fw-bold mb-3" style="color: #1976d2;">2. Contactos e Localização</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
                             <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
                                     <label for="contacto_telefone">Contacto Telefónico Geral *</label>
-                                    <input type="tel" id="contacto_telefone" name="contacto_telefone" value="+351 210 123 456" required>
+                                    <input type="tel" id="contacto_telefone" name="contacto_telefone" placeholder="Ex: +351 210 123 456" required>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="custom-input-group mb-0">
                                     <label for="email_geral">Email Geral *</label>
-                                    <input type="email" id="email_geral" name="email_geral" value="geral@draeger.pt" required>
+                                    <input type="email" id="email_geral" name="email_geral" placeholder="Ex: geral@empresa.pt" required>
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3">
                                 <div class="custom-input-group mb-0">
                                     <label for="morada">Morada (Sede / Escritório)</label>
-                                    <input type="text" id="morada" name="morada" value="Rua da Indústria, nº 45, 1000-123 Lisboa">
+                                    <input type="text" id="morada" name="morada" placeholder="Ex: Rua da Indústria, nº 45, 1000-123 Lisboa">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="custom-input-group mb-0">
                                     <label for="website">Website Oficial</label>
-                                    <input type="url" id="website" name="website" value="https://www.draeger.pt">
+                                    <input type="url" id="website" name="website" placeholder="Ex: https://www.empresa.pt">
                                 </div>
                             </div>
                         </div>
@@ -143,32 +109,31 @@
                             <div class="col-md-6 mb-3 mb-md-0">
                                 <div class="custom-input-group mb-0">
                                     <label for="pessoa_contacto">Nome do Comercial / Técnico *</label>
-                                    <input type="text" id="pessoa_contacto" name="pessoa_contacto" value="Rui Santos" required>
+                                    <input type="text" id="pessoa_contacto" name="pessoa_contacto" placeholder="Ex: Rui Santos" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="custom-input-group mb-0">
                                     <label for="telefone_contacto">Telefone Direto / Telemóvel *</label>
-                                    <input type="tel" id="telefone_contacto" name="telefone_contacto" value="912 345 678" required>
+                                    <input type="tel" id="telefone_contacto" name="telefone_contacto" placeholder="Ex: 912 345 678" required>
                                 </div>
                             </div>
                         </div>
 
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">4. Observações</h5>
-                        <div class="bg-light rounded-4 p-3 border-start border-4 border-warning shadow-sm mb-4">
+                        <div class="bg-light rounded-4 p-3 border-start border-4 border-info shadow-sm mb-4">
                             <div class="custom-input-group mb-0">
                                 <label for="observacoes"><i class="fa-solid fa-circle-info me-1"></i> Notas Adicionais</label>
-                                <textarea id="observacoes" name="observacoes" rows="3">Fornecedor exclusivo para ventiladores pulmonares.
-Horário de atendimento: Dias úteis das 09h às 18h. Suporte técnico 24h contratado.</textarea>
+                                <textarea id="observacoes" name="observacoes" rows="3" placeholder="Indique informações relevantes (Ex: Horário de atendimento, tempo médio de resposta para reparações, condições de pagamento, etc.)"></textarea>
                             </div>
                         </div>
 
                         <div class="d-flex justify-content-end gap-3 mt-4 border-top pt-4">
-                            <a href="fornecedores.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
+                            <a href="/Projeto SIBDAS/private/views/fornecedores/fornecedores.php" class="btn btn-outline-secondary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center">
                                 <i class="fa-solid fa-xmark me-2"></i> Cancelar
                             </a>
-                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #1976d2; border-color: #1976d2;">
-                                <i class="fa-regular fa-floppy-disk me-2"></i> Guardar Alterações
+                            <button type="submit" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm d-flex align-items-center" style="background-color: #2196f3; border-color: #2196f3;">
+                                <i class="fa-solid fa-building-circle-check me-2"></i> Salvar Fornecedor
                             </button>
                         </div>
 
@@ -180,7 +145,4 @@ Horário de atendimento: Dias úteis das 09h às 18h. Suporte técnico 24h contr
     </main>
 </div>
 
-<script src="../../includes/bootstrap/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+<?php include '../../includes/footer.php'; ?>
