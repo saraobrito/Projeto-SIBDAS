@@ -1,47 +1,30 @@
 <?php
-    $page_title = "Documentação - Hospital Praia Dourada";
-    include '../../includes/header.php';
+    $page_title = "Documentação";
+    $titulo = "Gestão de Documentos";
+    $subtitulo = "Repositório central de manuais, certificados e normas técnicas.";
     $pagina_ativa = 'documentacao';
+
+    include '../../includes/header.php';
+
 ?>
+
 <body style="background-color: #f8fbff;">
 
     <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
-        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-            <div class="d-flex align-items-center gap-4">
-                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
-                    <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
-                </button>
-                <div>
-                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Gestão de Documentação</h1>
-                    <p style="color: #666; margin: 0;">Repositório central de manuais, certificados e normas técnicas.</p>
-                </div>
-            </div>
-            
-            <div class="dropdown">
-                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
-                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
-                    <i class="fa-regular fa-user me-1 text-primary"></i> <strong>Utilizador</strong> - Data
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-danger" href="../../../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
-                </ul>
-            </div>
-        </header>
+        
+        <?php 
+            include '../../includes/page_header.php'; 
+        ?>
 
-        <!-- Dentro da tua secção, após o header e antes da tabela -->
         <section class="seccao-tabela" style="padding: 30px;">
             
-            <!-- Barra de Pesquisa e Botão Filtros -->
+            
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3 w-100">
                 <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 600px;">
                     <div class="position-relative flex-grow-1">
                         <i class="fa-solid fa-magnifying-glass position-absolute text-muted" style="left: 15px; top: 50%; transform: translateY(-50%);"></i>
-                        <!-- Pesquisa abrangente: Nome, Categoria, Equipamento, Código -->
                         <input type="text" class="form-control shadow-sm" placeholder="Pesquisar por nome, categoria ou código do equipamento..." style="padding-left: 40px; border-radius: 10px; height: 42px;">
                     </div>
                     <button class="btn btn-outline-primary shadow-sm fw-bold text-nowrap d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#painelFiltros" style="border-radius: 10px; height: 42px;">

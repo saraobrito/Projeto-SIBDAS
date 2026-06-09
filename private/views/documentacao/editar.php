@@ -1,38 +1,22 @@
 <?php
-    $page_title = "Editar Documento - Hospital Praia Dourada";
-    include '../../includes/header.php';
+    $page_title = "Editar Documento";
+    $titulo = "Gestão de Documentos";
+    $subtitulo = "Edição de atributos e metadados de documentos técnicos.";
     $pagina_ativa = 'documentacao';
+
+    include '../../includes/header.php';
+
 ?>
+
 <body style="background-color: #f8fbff;">
 
     <?php include '../../includes/sidebar.php'; ?>
 
     <main class="main-content flex-grow-1" style="padding: 0; min-height: 100vh;">
         
-        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; margin: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-            <div class="d-flex align-items-center gap-4">
-                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" title="Abrir Menu">
-                    <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
-                </button>
-                <div>
-                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Gestão de Documentação</h1>
-                    <p style="color: #666; margin: 0;">Edição de atributos e metadados de documentos técnicos.</p>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="btn dropdown-toggle shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" 
-                        style="background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #e3f2fd; color: #333;">
-                    <i class="fa-regular fa-user me-1 text-primary"></i> <strong>Utilizador</strong> - Data
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2 text-muted"></i>Alterar palavra-passe</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Definições</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-danger" href="../../../public/index.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
-                </ul>
-            </div>
-        </header>
+        <?php 
+            include '../../includes/page_header.php'; 
+        ?>
 
         <section style="padding: 30px; display: flex; justify-content: center;">
             <div class="card w-100 shadow-sm rounded-4 border-0" style="max-width: 900px;">

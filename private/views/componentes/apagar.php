@@ -1,9 +1,12 @@
 <?php
-    $page_title = "Apagar Componente - Hospital Praia Dourada";
-    include '../../includes/header.php';
+    $page_title = "Apagar Componente";
+    $titulo = "Gestão de Componentes";
+    $subtitulo = "Remoção de componentes do inventário.";
     $pagina_ativa = 'componentes';
-?>
 
+    include '../../includes/header.php';
+
+?>
 
 <body style="background-color: #f8fbff;">
 
@@ -12,17 +15,9 @@
 
     <main class="main-content w-100" style="padding: 0; min-height: 100vh;">
         
-        <header class="cabecalho-dashboard border-bottom shadow-sm" style="background-color: #f0f7fd; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-            <div class="d-flex align-items-center gap-4">
-                <button class="btn border-0 shadow-sm rounded-3 bg-white p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
-                    <i class="fa-solid fa-bars fs-4" style="color: #1976d2;"></i>
-                </button>
-                <div>
-                    <h1 style="font-size: 2rem; color: #1976d2; font-weight: bold; margin-bottom: 5px;">Gestão de Componentes</h1>
-                    <p style="color: #666; margin: 0;">Remoção de componentes do inventário.</p>
-                </div>
-            </div>
-        </header>
+        <?php 
+            include '../../includes/page_header.php'; 
+        ?>
 
         <section class="p-2" style="margin-top: 40px;">
             <div class="d-flex justify-content-center">
