@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Documentação atualizada com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: documentacao.php"); 
+        exit();
+    }
+
     $page_title = "Editar Documento";
     $titulo = "Gestão de Documentos";
     $subtitulo = "Edição de atributos e metadados de documentos técnicos.";
@@ -29,7 +38,7 @@
                     </div>
                     <hr class="mb-4">
 
-                    <form action="/Projeto SIBDAS/private/views/documentacao/documentacao.php" method="POST">
+                    <form action="" method="POST">
 
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação do Documento</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">

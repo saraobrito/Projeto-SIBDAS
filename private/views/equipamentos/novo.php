@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Equipamento registado com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: equipamentos.php"); 
+        exit();
+    }
+
     $page_title = "Registar Equipamento";
     $titulo = "Gestão de Equipamentos";
     $subtitulo = "Introduza os detalhes técnicos e clínicos do novo dispositivo.";
@@ -28,7 +37,7 @@
                     </h2>
                     <hr class="mb-4">
 
-                    <form action="/Projeto SIBDAS/private/views/equipamentos/equipamentos.php" method="POST">
+                    <form action=" " method="POST">
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação do Dispositivo</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
                             <div class="col-md-6 mb-3">

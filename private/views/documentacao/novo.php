@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Documentação registada com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: documentacao.php"); 
+        exit();
+    }
+
     $page_title = "Registar Documento";
     $titulo = "Gestão de Documentos";
     $subtitulo = "Submeter novo manual, certificado ou norma técnica ao sistema.";
@@ -29,7 +38,7 @@
                     </div>
                     <hr class="mb-4">
 
-                    <form action="/Projeto SIBDAS/private/views/documentacao/documentacao.php" method="POST" enctype="multipart/form-data">
+                    <form action="" method="POST" enctype="multipart/form-data">
 
                         <!-- Bloco 1: Identificação -->
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Informação do Ficheiro</h5>

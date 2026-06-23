@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $page_title = "Documentação";
     $titulo = "Gestão de Documentos";
     $subtitulo = "Repositório central de manuais, certificados e normas técnicas.";
@@ -20,6 +21,7 @@
 
         <section class="seccao-tabela" style="padding: 30px;">
             
+            <?php include '../../includes/alerts.php'; ?>
             
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3 w-100">
                 <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 600px;">
@@ -99,6 +101,11 @@
                     </table>
                 </div>
             </div>
+
+            <?php 
+                include '../../includes/pagination.php'; 
+            ?>
+
         </section>
     </main>
 </div>

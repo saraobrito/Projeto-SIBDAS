@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Categoria eliminada com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: categorias.php"); 
+        exit();
+    }
+
     $page_title = "Apagar Categoria";
     $titulo = "Gestão de Categorias";
     $subtitulo = "Remoção de registos de categorias do sistema.";
@@ -47,9 +56,12 @@
                         <a href="/Projeto SIBDAS/private/views/categorias/categorias.php" class="btn btn-outline-secondary px-4 py-2">
                             <i class="fa-solid fa-xmark me-2"></i>Cancelar
                         </a>
-                        <a href="/Projeto SIBDAS/private/views/categorias/categorias.php" class="btn btn-danger px-4 py-2">
-                            <i class="fa-solid fa-trash-can me-2"></i>Sim, Eliminar
-                        </a>
+                        
+                        <form action="" method="POST" class="m-0">
+                            <button type="submit" class="btn btn-danger px-4 py-2">
+                                <i class="fa-solid fa-trash-can me-2"></i>Sim, Eliminar
+                            </button>
+                        </form>
                     </div>
                     
                 </div>

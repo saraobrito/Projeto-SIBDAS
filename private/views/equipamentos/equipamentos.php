@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $page_title = "Equipamentos";
     $titulo = "Gestão de Equipamentos";
     $subtitulo = "Monitorização dos equipamentos.";
@@ -20,6 +21,8 @@
     ?>
 
         <section class="seccao-tabela" style="padding: 30px;">
+
+            <?php include '../../includes/alerts.php'; ?>
             
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
                 
@@ -174,13 +177,9 @@
                 </div>
             </div>
 
-            <div class="paginacao" style="text-align: right; margin-top: 25px;">
-                <button class="pag-num">Anterior</button>
-                <button class="pag-num ativo">1</button>
-                <button class="pag-num">2</button>
-                <button class="pag-num">3</button>
-                <button class="pag-num">Seguinte</button>
-            </div>
+            <?php 
+                include '../../includes/pagination.php'; 
+            ?>
 
         </section>
     </main>

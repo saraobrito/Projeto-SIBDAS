@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Equipamento eliminado com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: equipamentos.php"); 
+        exit();
+    }
+
     $page_title = "Apagar Equipamento";
     $titulo = "Gestão de Equipamentos";
     $subtitulo = "Remoção de equipamentos do inventário.";
@@ -46,9 +55,11 @@
                         <a href="/Projeto SIBDAS/private/views/equipamentos/equipamentos.php" class="btn btn-outline-secondary px-4 py-2">
                             <i class="fa-solid fa-xmark me-2"></i>Cancelar
                         </a>
-                        <a href="/Projeto SIBDAS/private/views/equipamentos/equipamentos.php" class="btn btn-danger px-4 py-2">
-                            <i class="fa-solid fa-trash-can me-2"></i>Sim, Eliminar
-                        </a>
+                        <form action="" method="POST" class="m-0">
+                            <button type="submit" class="btn btn-danger px-4 py-2">
+                                <i class="fa-solid fa-trash-can me-2"></i>Sim, Eliminar
+                            </button>
+                        </form>
                     </div>
                     
                 </div>

@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Componente registado com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: componentes.php"); 
+        exit();
+    }
+
     $page_title = "Registar Componente";
     $titulo = "Gestão de Componentes";
     $subtitulo = "Adicione novos componentes ao inventário.";
@@ -27,7 +36,7 @@
                     </h2>
                     <hr class="mb-4">
 
-                    <form action="/Projeto SIBDAS/private/views/componentes/componentes.php" method="POST">
+                    <form action=" " method="POST">
 
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">

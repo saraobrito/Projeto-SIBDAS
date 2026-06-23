@@ -1,4 +1,13 @@
-<?php
+<?php 
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['mensagem_alerta'] = "Categoria registada com sucesso!";
+        $_SESSION['tipo_alerta'] = "success"; 
+        header("Location: categorias.php"); 
+        exit();
+    }
+    
     $page_title = "Registar Categoria";
     $titulo = "Gestão de Categorias";
     $subtitulo = "Adicione um novo tipo de equipamento com regras de gestão associadas.";
@@ -27,7 +36,7 @@
                     </h2>
                     <hr class="mb-4">
 
-                    <form action="/Projeto SIBDAS/private/views/categorias/categorias.php" method="POST">
+                    <form action=" " method="POST">
                         <h5 class="fw-bold mb-3" style="color: #1976d2;">1. Identificação</h5>
                         <div class="row bg-light rounded-4 p-3 mb-4 mx-0 shadow-sm border border-light">
                             <div class="col-md-6 mb-3">

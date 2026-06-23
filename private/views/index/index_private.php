@@ -157,14 +157,10 @@
                 </div>
             </div>
 
-            <div class="paginacao" style="text-align: right; margin-top: 25px;">
-                <button class="pag-num">Anterior</button>
-                <button class="pag-num ativo">1</button>
-                <button class="pag-num">2</button>
-                <button class="pag-num">3</button>
-                <button class="pag-num">Seguinte</button>
-            </div>
-
+            <?php 
+                include '../../includes/pagination.php'; 
+            ?>
+            
         </div>
     </main>
 </div>
