@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Detalhes do Componente";
     $titulo = "Gestão de Componentes";
     $subtitulo = "Ficha técnica detalhada do componente";

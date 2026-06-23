@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Categorias";
     $titulo = "Gestão de Categorias";
     $subtitulo = "Organização dos tipos de equipamentos.";

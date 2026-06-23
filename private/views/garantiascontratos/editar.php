@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Editar Garantia/Contrato";
     $titulo = "Gestão de Garantias & Contratos";
     $subtitulo = "Modifique os prazos e condições contratuais do equipamento.";

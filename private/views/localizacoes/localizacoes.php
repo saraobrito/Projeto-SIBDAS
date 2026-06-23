@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Localizações";
     $titulo = "Gestão de Localizações";
     $subtitulo = "Estruturação física e organização dos espaços do hospital.";

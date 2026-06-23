@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Detalhes do Fornecedor";
     $titulo = "Gestão de Fornecedores";
     $subtitulo = "Ficha técnica detalhada do fornecedor";

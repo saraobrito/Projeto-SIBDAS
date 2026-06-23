@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Detalhes do Equipamento";
     $titulo = "Gestão de Equipamentos";
     $subtitulo = "Ficha técnica detalhada do dispositivo médico.";

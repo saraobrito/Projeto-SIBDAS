@@ -1,6 +1,6 @@
 <?php 
     session_start();
-
+    require_once __DIR__ . '/../../includes/auth_check.php';
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['mensagem_alerta'] = "Componente registado com sucesso!";
         $_SESSION['tipo_alerta'] = "success"; 

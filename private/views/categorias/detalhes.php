@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Detalhes da Categoria";
     $titulo = "Gestão de Categorias";
     $subtitulo = "Ficha técnica e inventário desta categoria.";

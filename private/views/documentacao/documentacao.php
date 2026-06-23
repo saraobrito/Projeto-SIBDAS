@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Documentação";
     $titulo = "Gestão de Documentos";
     $subtitulo = "Repositório central de manuais, certificados e normas técnicas.";

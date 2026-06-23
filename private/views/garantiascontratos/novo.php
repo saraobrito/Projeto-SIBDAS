@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Registar Garantia/Contrato";
     $titulo = "Gestão de Garantias & Contratos";
     $subtitulo = "Introduza os detalhes técnicos da nova garantia/contrato. ";

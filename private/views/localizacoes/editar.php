@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Editar Localização";
     $titulo = "Gestão de Localizações";
     $subtitulo = "Atualize as informações da localização.";

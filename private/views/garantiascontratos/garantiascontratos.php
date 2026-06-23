@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once __DIR__ . '/../../includes/auth_check.php';
     $page_title = "Garantias & Contratos";
     $titulo = "Gestão de Garantias & Contratos";
     $subtitulo = "Gestão de prazos de garantia e contratos de manutenção técnica.";

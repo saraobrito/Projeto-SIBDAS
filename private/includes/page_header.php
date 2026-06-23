@@ -27,7 +27,7 @@
                 <i class="fa-solid fa-gear me-2 text-muted"></i>Definições de Perfil
             </a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="/Projeto SIBDAS/public/index.php">
+            <li><a class="dropdown-item text-danger" href="/Projeto SIBDAS/public/logout.php">
                 <i class="fa-solid fa-right-from-bracket me-2"></i>Sair
             </a></li>
         </ul>
